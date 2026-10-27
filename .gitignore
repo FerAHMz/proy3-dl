@@ -1,0 +1,21 @@
+# Llaves y configuración local (nunca subir la API key)
+.env
+
+# Entorno de Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Cachés de modelos y de Streamlit
+.cache/
+.streamlit/secrets.toml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+
+# Configuración local de herramientas
+.claude/

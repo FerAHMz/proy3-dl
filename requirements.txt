@@ -1,0 +1,8 @@
+anthropic>=2.0
+streamlit>=1.40
+sentence-transformers
+scikit-learn
+pandas
+numpy
+python-dotenv
+pillow
