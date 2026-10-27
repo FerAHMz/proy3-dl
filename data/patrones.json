@@ -1,0 +1,336 @@
+[
+  {
+    "id": "premio_falso",
+    "nombre": "Premio o sorteo falso",
+    "descripcion": "Avisan que ganaste un premio, rifa o sorteo (de una telefónica, un banco, un supermercado o una marca conocida) que nunca jugaste. Para entregarlo piden pagar impuestos, envío o una recarga, o piden datos personales.",
+    "senales": [
+      "premio que no participaste",
+      "pedido de pago para recibir el premio",
+      "plazo muy corto para reclamar",
+      "número personal o enlace no oficial"
+    ],
+    "ejemplo": "¡Felicidades! Su número fue ganador de Q15,000 en la promoción aniversario. Para reclamar deposite Q350 de gastos de entrega al 4521-8890.",
+    "que_hacer": [
+      "No pagués nada para recibir un premio",
+      "Confirmá llamando al número oficial de la empresa",
+      "Bloqueá y reportá el número"
+    ]
+  },
+  {
+    "id": "banco_bloqueo",
+    "nombre": "Banco: cuenta o tarjeta bloqueada (phishing)",
+    "descripcion": "Se hacen pasar por un banco (Banrural, Industrial, BAM, G&T Continental u otro) y dicen que tu cuenta o tarjeta fue bloqueada o tuvo un movimiento extraño. Mandan un enlace a una página falsa para que ingresés usuario, contraseña o datos de la tarjeta.",
+    "senales": [
+      "enlace que no es el dominio oficial del banco",
+      "urgencia por bloqueo o suspensión",
+      "pide usuario, contraseña, token o datos de tarjeta",
+      "dominio que imita al banco"
+    ],
+    "ejemplo": "BANRURAL: Su usuario fue suspendido por actividad inusual. Reactive en las próximas 2 horas ingresando a banrural-seguridad.com/verificar",
+    "que_hacer": [
+      "No abrás el enlace",
+      "Entrá a tu banca en línea escribiendo la dirección oficial o usando la app",
+      "Llamá al número que aparece detrás de tu tarjeta",
+      "Reportalo a tu banco (Banrural, por ejemplo, recibe reportes al 2308-3000 opción 0)"
+    ]
+  },
+  {
+    "id": "familiar_emergencia",
+    "nombre": "Familiar o amigo en emergencia con número nuevo",
+    "descripcion": "Alguien escribe desde un número desconocido diciendo ser tu hijo, mamá o amigo, que cambió de número o se le arruinó el teléfono, y pide un depósito urgente por una emergencia, una deuda o un problema con la policía.",
+    "senales": [
+      "número nuevo o desconocido que dice ser un familiar",
+      "pedido urgente de dinero",
+      "pide que no llamés o que no le digás a nadie",
+      "cuenta a nombre de un tercero"
+    ],
+    "ejemplo": "Hola ma, soy yo, este es mi número nuevo. Tengo un problema y necesito que me depositás Q1,200 hoy, después te explico, no me llamés que estoy en reunión.",
+    "que_hacer": [
+      "Llamá al número de siempre de tu familiar antes de depositar",
+      "Hacé una pregunta que solo esa persona sabría",
+      "No depositar a cuentas de terceros"
+    ]
+  },
+  {
+    "id": "paquete_retenido",
+    "nombre": "Paquete retenido en aduana o courier",
+    "descripcion": "Un mensaje dice que tenés un paquete retenido en aduanas, en un courier o en el correo, y que para liberarlo debés pagar un arancel o actualizar tu dirección en un enlace.",
+    "senales": [
+      "paquete que no esperabas",
+      "cobro pequeño para liberar el envío",
+      "enlace acortado o dominio extraño",
+      "pide datos de tarjeta"
+    ],
+    "ejemplo": "Aviso de envío: su paquete está retenido en aduana por falta de pago de Q27.50. Pague en bit.ly/entrega-gt para evitar la devolución.",
+    "que_hacer": [
+      "Rastreá el paquete solo en la página oficial del courier",
+      "No pagués desde enlaces de mensajes",
+      "Si no esperás nada, ignoralo",
+      "Correos de Guatemala no cobra por enlaces; verificá en correos.gob.gt o al 1595"
+    ]
+  },
+  {
+    "id": "empleo_falso",
+    "nombre": "Empleo falso o trabajo por tareas",
+    "descripcion": "Ofrecen trabajo desde casa con ganancias altas por tareas simples (dar likes, reseñas, ver videos). Al principio pagan poco para ganar confianza y luego piden depositar dinero para desbloquear tareas o comisiones.",
+    "senales": [
+      "ganancias muy altas por poco trabajo",
+      "contacto por WhatsApp o Telegram sin entrevista",
+      "pide depósito para empezar o para retirar",
+      "reclutador sin empresa verificable"
+    ],
+    "ejemplo": "Hola, buscamos personal para trabajo en casa, ganás de Q300 a Q800 diarios solo dando likes a videos. Escribime por Telegram para empezar hoy.",
+    "que_hacer": [
+      "Un trabajo real no te cobra para empezar",
+      "Buscá la empresa en fuentes oficiales",
+      "No depositar dinero para retirar ganancias"
+    ]
+  },
+  {
+    "id": "inversion_cripto",
+    "nombre": "Inversión o cripto con ganancia garantizada",
+    "descripcion": "Prometen duplicar o multiplicar tu dinero en poco tiempo con criptomonedas, forex o un negocio de inversión, con ganancias garantizadas y testimonios de personas que ya ganaron.",
+    "senales": [
+      "ganancia garantizada o sin riesgo",
+      "plazos muy cortos para duplicar el dinero",
+      "presión para invertir ya",
+      "pagos con cripto o a cuentas personales"
+    ],
+    "ejemplo": "Invertí Q1,000 hoy y recibí Q4,000 en 72 horas con nuestro sistema de trading automático. 100% garantizado, cupos limitados.",
+    "que_hacer": [
+      "Ninguna inversión real garantiza ganancias",
+      "Verificá si la entidad está autorizada por la SIB",
+      "No transfieras a cuentas personales ni billeteras cripto"
+    ]
+  },
+  {
+    "id": "prestamo_anticipo",
+    "nombre": "Préstamo con cobro por adelantado",
+    "descripcion": "Ofrecen un préstamo rápido sin fiador ni buró de crédito, pero antes de desembolsarlo piden pagar una comisión, un seguro o un trámite.",
+    "senales": [
+      "préstamo aprobado sin revisar tu historial",
+      "cobro previo al desembolso",
+      "contacto solo por WhatsApp",
+      "pagos a cuentas personales"
+    ],
+    "ejemplo": "Su préstamo de Q25,000 fue APROBADO sin fiador. Para el desembolso deposite Q450 de seguro de crédito a la cuenta 3-123-45678-9.",
+    "que_hacer": [
+      "Las financieras reales descuentan comisiones del préstamo, no te las cobran antes",
+      "Verificá que la financiera esté registrada",
+      "No depositar por adelantado"
+    ]
+  },
+  {
+    "id": "codigo_whatsapp",
+    "nombre": "Robo de cuenta con código de verificación",
+    "descripcion": "Alguien te pide que le reenvíes un código de 6 dígitos que te llegó por SMS, diciendo que lo enviaron por error o que es para un concurso. Con ese código se roban tu cuenta de WhatsApp, Facebook o tu banca.",
+    "senales": [
+      "pide reenviar un código SMS",
+      "dice que el código te llegó por error",
+      "suele venir de un contacto conocido ya hackeado",
+      "urgencia"
+    ],
+    "ejemplo": "Hola, perdón, te mandé un código de 6 dígitos por SMS sin querer, me lo podés pasar porfa? Es urgente.",
+    "que_hacer": [
+      "Nunca compartás códigos de verificación",
+      "Activá la verificación en dos pasos de WhatsApp",
+      "Avisale a tu contacto por otra vía que lo hackearon"
+    ]
+  },
+  {
+    "id": "venta_anticipo",
+    "nombre": "Compra o venta en línea con anticipo o comprobante falso",
+    "descripcion": "En Marketplace o grupos de venta, el vendedor pide un anticipo para apartar un producto muy barato y desaparece, o el comprador manda un comprobante de transferencia falso y pide que le entregués el producto o le devolvás un excedente.",
+    "senales": [
+      "precio demasiado bajo",
+      "pide anticipo para apartar",
+      "comprobante de pago sin acreditación real",
+      "pide devolver dinero 'depositado de más'"
+    ],
+    "ejemplo": "Te deposité Q2,000 por error en vez de Q200, ya te mandé el comprobante, me podés devolver los Q1,800 porfa?",
+    "que_hacer": [
+      "Verificá en tu banca que el dinero realmente llegó",
+      "No des anticipos por productos que no viste",
+      "Preferí entrega contra pago en un lugar público"
+    ]
+  },
+  {
+    "id": "secuestro_virtual",
+    "nombre": "Secuestro virtual",
+    "descripcion": "Dicen tener secuestrado a un familiar y exigen un pago inmediato, muchas veces con gritos o audios falsos, mientras mantienen a la víctima ocupada para que no pueda comprobarlo.",
+    "senales": [
+      "amenaza sobre un familiar",
+      "exigencia de pago inmediato",
+      "pide no colgar ni avisar a nadie",
+      "no dejan hablar con el familiar"
+    ],
+    "ejemplo": "Tenemos a tu hijo, si querés volver a verlo depositá Q10,000 en la próxima hora y no avisés a la policía.",
+    "que_hacer": [
+      "Mantené la calma y tratá de contactar directamente al familiar",
+      "Llamá al 110 de la PNC o denunciá de forma anónima al 1561",
+      "No depositar"
+    ]
+  },
+  {
+    "id": "extorsion",
+    "nombre": "Extorsión con amenazas",
+    "descripcion": "Mensajes que exigen pagos periódicos o un pago único a cambio de no hacer daño, a veces diciendo pertenecer a una pandilla o grupo criminal, o usando datos de la víctima para intimidar.",
+    "senales": [
+      "amenazas contra tu vida, familia o negocio",
+      "exigencia de pago",
+      "uso de tu nombre o dirección para intimidar"
+    ],
+    "ejemplo": "Sabemos dónde está tu tienda. Si no pagás Q3,000 cada mes vamos a tomar acciones contra vos y tu familia.",
+    "que_hacer": [
+      "No respondás ni pagués",
+      "Denunciá a la línea antiextorsión 1574 de la PNC o en el Ministerio Público",
+      "Guardá capturas como evidencia"
+    ]
+  },
+  {
+    "id": "suplantacion_institucion",
+    "nombre": "Suplantación de institución pública",
+    "descripcion": "Se hacen pasar por la SAT, el IGSS, RENAP, la PNC o una municipalidad para avisar de una multa, una deuda, una devolución de impuestos o un trámite pendiente, y mandan un enlace para pagar o ingresar datos.",
+    "senales": [
+      "dominio que no termina en .gob.gt",
+      "multa o devolución inesperada",
+      "urgencia por embargo o sanción",
+      "pide datos de tarjeta o DPI"
+    ],
+    "ejemplo": "SAT informa: tiene una devolución de ISR de Q1,850 pendiente. Ingrese sus datos bancarios en sat-devoluciones.info para recibirla.",
+    "que_hacer": [
+      "Las instituciones oficiales usan dominios .gob.gt",
+      "Consultá directamente en el portal oficial",
+      "No ingresés datos bancarios desde enlaces de mensajes"
+    ]
+  },
+  {
+    "id": "servicio_corte",
+    "nombre": "Corte de servicio inmediato",
+    "descripcion": "Avisan que te van a cortar la luz, el agua, el internet o el teléfono hoy mismo por un saldo pendiente, y piden pagar a una cuenta o enlace distinto al habitual.",
+    "senales": [
+      "corte inmediato",
+      "monto que no coincide con tu factura",
+      "cuenta o enlace de pago no oficial"
+    ],
+    "ejemplo": "EEGSA: su servicio será suspendido HOY a las 5pm por saldo pendiente de Q385. Evite el corte pagando aquí: eegsa-pagos.online",
+    "que_hacer": [
+      "Revisá tu saldo en la app o página oficial",
+      "Pagá solo por los canales de siempre",
+      "Llamá a servicio al cliente de la empresa"
+    ]
+  },
+  {
+    "id": "romance",
+    "nombre": "Estafa romántica",
+    "descripcion": "Una persona que conociste en redes o apps de citas gana tu confianza durante semanas y luego pide dinero por una emergencia, un viaje para conocerte o un paquete con regalos que quedó en aduana.",
+    "senales": [
+      "relación solo en línea que avanza muy rápido",
+      "excusas para no hacer videollamada",
+      "pedido de dinero por emergencia o viaje"
+    ],
+    "ejemplo": "Mi amor, ya tengo todo listo para ir a verte a Guatemala pero me retuvieron en el aeropuerto, necesito $500 para la multa, te lo devuelvo cuando llegue.",
+    "que_hacer": [
+      "No enviés dinero a alguien que no conocés en persona",
+      "Pedí una videollamada",
+      "Buscá sus fotos en internet para ver si son robadas"
+    ]
+  },
+  {
+    "id": "soporte_tecnico",
+    "nombre": "Falso soporte técnico o virus",
+    "descripcion": "Avisan que tu teléfono o computadora tiene un virus, o que tu cuenta tiene un problema, y te piden instalar una aplicación de acceso remoto o una 'app de seguridad' que en realidad roba información.",
+    "senales": [
+      "alerta de virus que no pediste",
+      "pide instalar una app o dar acceso remoto",
+      "enlace a archivo .apk"
+    ],
+    "ejemplo": "ALERTA: Su celular tiene 3 virus que pueden robar sus datos bancarios. Descargue el antivirus aquí: seguridad-movil.xyz/limpiar.apk",
+    "que_hacer": [
+      "No instalés apps fuera de la tienda oficial",
+      "Nunca des acceso remoto a desconocidos",
+      "Ignorá alertas que llegan por mensaje"
+    ]
+  },
+  {
+    "id": "operadora_chip",
+    "nombre": "Falsa operadora telefónica (chip o línea)",
+    "descripcion": "Se hacen pasar por Tigo o Claro para 'actualizar tu chip', 'migrar tu línea' o regalar saldo, y piden un código o tus datos para tomar control de tu número.",
+    "senales": [
+      "pide códigos o PIN de tu línea",
+      "actualización de chip urgente",
+      "regalo de saldo o megas a cambio de datos"
+    ],
+    "ejemplo": "TIGO: Su chip será desactivado por actualización 5G. Responda con el código que le llegará por SMS para conservar su número.",
+    "que_hacer": [
+      "Las operadoras no piden códigos por mensaje",
+      "Acudí a una agencia oficial si tenés dudas",
+      "No respondás con códigos"
+    ]
+  },
+  {
+    "id": "remesa_falsa",
+    "nombre": "Remesa retenida",
+    "descripcion": "Avisan que te llegó una remesa o transferencia del extranjero pero que está retenida, y que para liberarla debés pagar una comisión o un impuesto.",
+    "senales": [
+      "remesa que no esperabas",
+      "cobro para liberar el dinero",
+      "contacto por WhatsApp sin agencia identificable"
+    ],
+    "ejemplo": "Le informamos que tiene una remesa de $800 a su nombre retenida. Para liberarla deposite Q275 de impuesto de envío.",
+    "que_hacer": [
+      "Las remesas reales no requieren pagos para cobrarlas",
+      "Confirmá con quien supuestamente te envió el dinero",
+      "Cobrá solo en agencias oficiales"
+    ]
+  },
+  {
+    "id": "bono_falso",
+    "nombre": "Bono, beca o subsidio falso",
+    "descripcion": "Ofrecen un bono del gobierno, un subsidio, una beca o una ayuda social y piden llenar un formulario con datos personales y bancarios, o pagar para inscribirse.",
+    "senales": [
+      "bono o beca que pide pago o datos bancarios",
+      "formulario en sitio no oficial",
+      "difusión masiva por WhatsApp con cadena"
+    ],
+    "ejemplo": "Gobierno de Guatemala entrega bono de Q1,000 a familias. Registrate aquí antes de que se acaben los cupos: bono-familia-gt.site",
+    "que_hacer": [
+      "Verificá en mides.gob.gt; el MIDES no pide datos por enlaces ni cobra por programas sociales",
+      "No compartás datos bancarios en formularios de cadenas",
+      "No reenviés la cadena"
+    ]
+  },
+  {
+    "id": "alquiler_falso",
+    "nombre": "Alquiler falso",
+    "descripcion": "Publican un apartamento o casa en alquiler a muy buen precio y piden un depósito para apartarlo sin dejar que lo visités, diciendo que el dueño está fuera del país.",
+    "senales": [
+      "precio muy por debajo del mercado",
+      "no permiten visitar antes",
+      "depósito para apartar",
+      "dueño fuera del país"
+    ],
+    "ejemplo": "Apartamento en zona 10 a Q1,800 al mes. Estoy fuera del país, depositame el primer mes para apartarlo y te envío las llaves por courier.",
+    "que_hacer": [
+      "No depositar sin ver la propiedad",
+      "Pedí ver documentos de propiedad",
+      "Desconfiá de precios demasiado bajos"
+    ]
+  },
+  {
+    "id": "donacion_falsa",
+    "nombre": "Colecta o donación falsa",
+    "descripcion": "Piden donaciones para una tragedia, un enfermo o una causa, usando fotos ajenas y cuentas personales, aprovechando emergencias recientes.",
+    "senales": [
+      "cuenta personal en vez de una organización",
+      "fotos o historias sin verificar",
+      "presión emocional y urgencia"
+    ],
+    "ejemplo": "Ayudemos a Josué, niño de 6 años que necesita operación urgente. Cualquier donación a la cuenta 4-555-12345-6 a nombre de Carlos Pérez. Comparte!!",
+    "que_hacer": [
+      "Doná a organizaciones reconocidas",
+      "Verificá la historia con fuentes confiables",
+      "Desconfiá de cuentas personales de terceros"
+    ]
+  }
+]
