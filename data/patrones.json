@@ -14,6 +14,10 @@
       "No pagués nada para recibir un premio",
       "Confirmá llamando al número oficial de la empresa",
       "Bloqueá y reportá el número"
+    ],
+    "fuentes": [
+      "https://www.prensalibre.com/guatemala/comunitario/10-mensajes-que-utilizan-los-estafadores-en-linea-para-robarle-su-dinero/",
+      "https://www.soy502.com/articulo/estafadores-hacen-pasar-trabajadores-sib-24039"
     ]
   },
   {
@@ -32,6 +36,10 @@
       "Entrá a tu banca en línea escribiendo la dirección oficial o usando la app",
       "Llamá al número que aparece detrás de tu tarjeta",
       "Reportalo a tu banco (Banrural, por ejemplo, recibe reportes al 2308-3000 opción 0)"
+    ],
+    "fuentes": [
+      "https://www.banrural.com.gt/site/seguridad/alerta-estafa",
+      "https://www.banrural.com.gt/ciberseguridad"
     ]
   },
   {
@@ -49,6 +57,9 @@
       "Llamá al número de siempre de tu familiar antes de depositar",
       "Hacé una pregunta que solo esa persona sabría",
       "No depositar a cuentas de terceros"
+    ],
+    "fuentes": [
+      "https://emisorasunidas.com/viral/2025/05/13/estan-enganando-a-whatsapp-con-ia/"
     ]
   },
   {
@@ -67,6 +78,11 @@
       "No pagués desde enlaces de mensajes",
       "Si no esperás nada, ignoralo",
       "Correos de Guatemala no cobra por enlaces; verificá en correos.gob.gt o al 1595"
+    ],
+    "fuentes": [
+      "https://emisorasunidas.com/2024/03/19/estafa-guatemaltecos-mensajes-de-texto/",
+      "https://lahora.gt/nacionales/hloarca/2024/09/04/alertan-de-estafas-por-mensajes-de-texto-que-usurpan-nombres-de-empresas-conocidas/",
+      "https://lahora.gt/nacionales/ralvarado/2026/09/29/correos-de-guatemala-alerta-por-mensajes-de-texto-fraudulentos-a-usuarios-now/"
     ]
   },
   {
@@ -84,6 +100,10 @@
       "Un trabajo real no te cobra para empezar",
       "Buscá la empresa en fuentes oficiales",
       "No depositar dinero para retirar ganancias"
+    ],
+    "fuentes": [
+      "https://www.prensalibre.com/guatemala/comunitario/alerta-en-whatsapp-el-mensaje-en-el-que-se-ofrece-empleo-en-linea-y-pone-en-riesgo-los-datos-personales/",
+      "https://www.soy502.com/articulo/alertan-nueva-modalidad-estafa-whatsapp-153"
     ]
   },
   {
@@ -101,6 +121,9 @@
       "Ninguna inversión real garantiza ganancias",
       "Verificá si la entidad está autorizada por la SIB",
       "No transfieras a cuentas personales ni billeteras cripto"
+    ],
+    "fuentes": [
+      "https://agn.gt/banco-de-guatemala-desmiente-sobre-programas-de-inversion-fraudulentos"
     ]
   },
   {
@@ -118,6 +141,9 @@
       "Las financieras reales descuentan comisiones del préstamo, no te las cobran antes",
       "Verificá que la financiera esté registrada",
       "No depositar por adelantado"
+    ],
+    "fuentes": [
+      "https://www.prensalibre.com/guatemala/justicia/estafas-digitales-en-guatemala-las-redes-y-metodos-que-mas-afectan-a-los-usuarios/"
     ]
   },
   {
@@ -135,6 +161,10 @@
       "Nunca compartás códigos de verificación",
       "Activá la verificación en dos pasos de WhatsApp",
       "Avisale a tu contacto por otra vía que lo hackearon"
+    ],
+    "fuentes": [
+      "https://lahora.gt/lh-economia/jveliz/2026/06/22/el-error-que-permite-a-los-estafadores-quedarse-con-tu-cuenta-de-whatsapp-en-minutos-now/",
+      "https://agn.gt/?p=562196"
     ]
   },
   {
@@ -152,6 +182,9 @@
       "Verificá en tu banca que el dinero realmente llegó",
       "No des anticipos por productos que no viste",
       "Preferí entrega contra pago en un lugar público"
+    ],
+    "fuentes": [
+      "https://www.prensalibre.com/guatemala/comunitario/10-mensajes-que-utilizan-los-estafadores-en-linea-para-robarle-su-dinero/"
     ]
   },
   {
@@ -169,6 +202,9 @@
       "Mantené la calma y tratá de contactar directamente al familiar",
       "Llamá al 110 de la PNC o denunciá de forma anónima al 1561",
       "No depositar"
+    ],
+    "fuentes": [
+      "https://emisorasunidas.com/nacional/2026/09/01/secuestro-gota-a-gota-pnc-alerta-nueva-modalidad/"
     ]
   },
   {
@@ -185,7 +221,8 @@
       "No respondás ni pagués",
       "Denunciá a la línea antiextorsión 1574 de la PNC o en el Ministerio Público",
       "Guardá capturas como evidencia"
-    ]
+    ],
+    "fuentes": []
   },
   {
     "id": "suplantacion_institucion",
@@ -202,7 +239,8 @@
       "Las instituciones oficiales usan dominios .gob.gt",
       "Consultá directamente en el portal oficial",
       "No ingresés datos bancarios desde enlaces de mensajes"
-    ]
+    ],
+    "fuentes": []
   },
   {
     "id": "servicio_corte",
@@ -218,7 +256,8 @@
       "Revisá tu saldo en la app o página oficial",
       "Pagá solo por los canales de siempre",
       "Llamá a servicio al cliente de la empresa"
-    ]
+    ],
+    "fuentes": []
   },
   {
     "id": "romance",
@@ -234,6 +273,9 @@
       "No enviés dinero a alguien que no conocés en persona",
       "Pedí una videollamada",
       "Buscá sus fotos en internet para ver si son robadas"
+    ],
+    "fuentes": [
+      "https://www.prensalibre.com/guatemala/justicia/estafas-digitales-en-guatemala-las-redes-y-metodos-que-mas-afectan-a-los-usuarios/"
     ]
   },
   {
@@ -250,7 +292,8 @@
       "No instalés apps fuera de la tienda oficial",
       "Nunca des acceso remoto a desconocidos",
       "Ignorá alertas que llegan por mensaje"
-    ]
+    ],
+    "fuentes": []
   },
   {
     "id": "operadora_chip",
@@ -266,6 +309,9 @@
       "Las operadoras no piden códigos por mensaje",
       "Acudí a una agencia oficial si tenés dudas",
       "No respondás con códigos"
+    ],
+    "fuentes": [
+      "https://www.prensalibre.com/guatemala/comunitario/asi-desactivaba-las-lineas-telefonicas-de-las-victimas-para-realizar-transacciones-bancarias/"
     ]
   },
   {
@@ -282,7 +328,8 @@
       "Las remesas reales no requieren pagos para cobrarlas",
       "Confirmá con quien supuestamente te envió el dinero",
       "Cobrá solo en agencias oficiales"
-    ]
+    ],
+    "fuentes": []
   },
   {
     "id": "bono_falso",
@@ -298,6 +345,10 @@
       "Verificá en mides.gob.gt; el MIDES no pide datos por enlaces ni cobra por programas sociales",
       "No compartás datos bancarios en formularios de cadenas",
       "No reenviés la cadena"
+    ],
+    "fuentes": [
+      "https://lahora.gt/nacionales/kjordan/2026/03/11/mides-denuncia-modalidad-de-estafa-en-el-que-ofrecian-q800-a-traves-del-bono-mujer/",
+      "https://www.bloomberglinea.com/latinoamerica/guatemala/que-dice-el-gobierno-de-guatemala-sobre-el-bono-familia/"
     ]
   },
   {
@@ -315,6 +366,9 @@
       "No depositar sin ver la propiedad",
       "Pedí ver documentos de propiedad",
       "Desconfiá de precios demasiado bajos"
+    ],
+    "fuentes": [
+      "https://www.prensalibre.com/guatemala/justicia/estafas-digitales-en-guatemala-las-redes-y-metodos-que-mas-afectan-a-los-usuarios/"
     ]
   },
   {
@@ -331,6 +385,116 @@
       "Doná a organizaciones reconocidas",
       "Verificá la historia con fuentes confiables",
       "Desconfiá de cuentas personales de terceros"
+    ],
+    "fuentes": []
+  },
+  {
+    "id": "multa_transito_falsa",
+    "nombre": "Multa de tránsito falsa (PMT o Emetra)",
+    "descripcion": "SMS, WhatsApp, correos o códigos QR avisan de una multa de tránsito pendiente o vencida y llevan a un dominio parecido al de la Municipalidad para pagarla o ingresar datos de tarjeta. En 2026 fue una de las estafas más reportadas en Guatemala.",
+    "senales": [
+      "multa que no conocés, a veces sin tener vehículo",
+      "dominio parecido a muniguate.com con letras o terminaciones de más",
+      "pide responder 'Y' o abrir un enlace",
+      "urgencia por intereses o mora"
+    ],
+    "ejemplo": "Estimado señor/a tiene una infracción por velocidad. Tiene una multa pendiente. Resuélvalo aquí: especiales.muniguate.icu/gt",
+    "que_hacer": [
+      "La PMT y Emetra no cobran multas por SMS ni por enlaces externos",
+      "Consultá tus multas solo en muniguate.com",
+      "No escaneés códigos QR de origen dudoso",
+      "Bloqueá y denunciá el número"
+    ],
+    "fuentes": [
+      "https://lahora.gt/nacionales/dleon/2026/02/09/alertan-sobre-estafas-mediante-mensajes-falsos-por-supuesto-cobro-de-infracciones/",
+      "https://www.agenciaocote.com/blog/2026/06/09/tiene-una-multa-pendiente-la-estafa-por-sms-y-whatsapp-que-se-viraliza-en-guatemala/",
+      "https://www.prensalibre.com/guatemala/pmt-de-guatemala-amplia-alerta-por-estafas-digitales-hay-mas-denuncias-y-nuevos-metodos-como-whatsapp-y-correo-electronico/"
+    ]
+  },
+  {
+    "id": "encomienda_familiar_extranjero",
+    "nombre": "Encomienda o maletas de un familiar en el extranjero",
+    "descripcion": "Un perfil falso de un familiar o amigo que vive en Estados Unidos escribe ('adivina quién soy') y promete mandar una encomienda con celulares, regalos o dinero. Después un falso courier o una falsa SAT cobra por sobrepeso, impuestos o 'dinero no declarado' y amenaza con cargos legales. El MP la reporta entre las más recurrentes.",
+    "senales": [
+      "'adivina quién de tu familia te habla'",
+      "número extranjero o perfil nuevo",
+      "cobros de courier, aduana o SAT para liberar el paquete",
+      "amenazas de cargos por lavado de dinero",
+      "depósitos a cuentas de particulares"
+    ],
+    "ejemplo": "Hola ¿cómo estás? adivina quien de tu familia en Estados Unidos te está hablando, si aciertas te doy una sorpresa",
+    "que_hacer": [
+      "Llamá a tu familiar a su número de siempre",
+      "Pedí el número de guía y verificalo con la empresa",
+      "Verificá cualquier multa directamente con la SAT",
+      "No depositar a cuentas de particulares"
+    ],
+    "fuentes": [
+      "https://www.soy502.com/articulo/victimas-alertan-estafa-whatsapp-ocurrida-guatemala-153",
+      "https://www.prensalibre.com/guatemala/justicia/alertan-sobre-modalidad-de-estafa-por-supuestas-encomiendas-y-dan-recomendaciones-para-evitar-ser-victima-breaking/",
+      "https://www.prensalibre.com/guatemala/justicia/como-operaba-en-redes-sociales-y-whatsapp-red-de-supuestos-estafadores-desarticulada-por-pnc/"
+    ]
+  },
+  {
+    "id": "tareas_pagadas_grupo",
+    "nombre": "Grupo de tareas pagadas (likes o reseñas) que termina en inversión",
+    "descripcion": "Te agregan sin pedirlo a un grupo de WhatsApp o Telegram que paga pequeñas sumas por seguir cuentas, dar likes o calificar películas y hoteles. Después de ganar confianza te piden depositar para desbloquear tareas, subir de nivel o 'invertir' con rendimientos irreales. Según el MP, el daño promedio pasó de unos Q24 mil en 2023 a unos Q70 mil en 2024.",
+    "senales": [
+      "te agregaron a un grupo sin pedirlo",
+      "pagan por likes, reseñas o capturas de pantalla",
+      "prometen de Q200 a Q1,000 diarios",
+      "piden depósito para desbloquear tareas o retirar ganancias"
+    ],
+    "ejemplo": "¡Queremos que usted siga a estos bloggers, comente y gane alrededor de Q200 a Q600 por día!",
+    "que_hacer": [
+      "Salí del grupo y reportalo como spam",
+      "No depositar para desbloquear tareas ni retirar ganancias",
+      "Denunciá en el Ministerio Público aunque solo te hayan agregado"
+    ],
+    "fuentes": [
+      "https://www.prensalibre.com/guatemala/justicia/estafas-por-whatsapp-alertan-sobre-nueva-modalidad-de-engano-en-guatemala/",
+      "https://www.soy502.com/articulo/alerta-guatemaltecos-estos-mensajes-llegan-whatsapp-101477",
+      "https://www.soy502.com/articulo/dinerofacil-forma-estan-estafando-guatemaltecos-101477"
+    ]
+  },
+  {
+    "id": "devolucion_falsa",
+    "nombre": "Devolución o reembolso falso (IGSS o SAT)",
+    "descripcion": "Un correo o mensaje que aparenta venir del IGSS o de la SAT dice que tenés una devolución de cuotas o de impuestos aprobada, o que estás 'omiso', y pide abrir un enlace para cobrarla o regularizarte, con lo que roban datos personales y bancarios. Suele dirigirse a pensionados y afiliados.",
+    "senales": [
+      "devolución o reembolso que no solicitaste",
+      "remitente o dominio parecido al oficial pero distinto",
+      "pide datos bancarios para depositarte",
+      "aviso de omiso con urgencia"
+    ],
+    "ejemplo": "IGSS informa: la SAT autorizó la devolución de sus cuotas. Ingrese al enlace para registrar su cuenta y recibir el reembolso.",
+    "que_hacer": [
+      "Verificá directamente en los portales oficiales del IGSS y de la SAT",
+      "No ingresés datos bancarios desde enlaces de mensajes o correos"
+    ],
+    "fuentes": [
+      "https://www.soy502.com/articulo/nueva-modalidad-estafa-alerta-guatemaltecos-101026",
+      "https://tvaztecaguate.com/nacionales/2026/05/11/alerta-de-estafa-este-es-el-mensaje-que-estan-recibiendo-guatemaltecos/"
+    ]
+  },
+  {
+    "id": "puntos_por_vencer",
+    "nombre": "Puntos de tarjeta por vencer",
+    "descripcion": "Un mensaje que aparenta ser del banco avisa que tus puntos de tarjeta de crédito están por vencer y manda un enlace para canjearlos. El enlace instala una aplicación de acceso remoto y luego pide validar tu identidad con biometría facial para vaciar la cuenta. Banrural la reportó con varios números remitentes.",
+    "senales": [
+      "puntos o beneficios a punto de vencer",
+      "enlace para canjear fuera de la app oficial",
+      "pide instalar una aplicación o validar tu rostro"
+    ],
+    "ejemplo": "Banrural: Sus puntos de tarjeta de crédito vencen hoy. Canjéelos antes de perderlos en el siguiente enlace.",
+    "que_hacer": [
+      "Canjeá puntos solo desde la app o la banca en línea oficial",
+      "No instalés aplicaciones desde enlaces",
+      "Nunca compartás tu biometría ni tus datos de tarjeta"
+    ],
+    "fuentes": [
+      "https://www.banrural.com.gt/alerta-de-smishing",
+      "https://www.banrural.com.gt/site/seguridad/alerta-estafa"
     ]
   }
 ]
