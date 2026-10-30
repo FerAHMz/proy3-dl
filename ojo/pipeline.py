@@ -8,8 +8,8 @@ from .llm import VERSIONES, clasificar
 from .preproceso import extraer_senales, normalizar, ocultar_datos_personales
 from .recuperacion import buscar
 
-VERSION_FINAL = "v5"
-EFFORT_FINAL = "low"
+VERSION_FINAL = "v6"
+EFFORT_FINAL = "medium"   # L8: mejor F1 en las tres corridas de evaluación
 
 
 def analizar(texto: str, remitente: str = "nose", version: str = VERSION_FINAL, effort: str = EFFORT_FINAL,

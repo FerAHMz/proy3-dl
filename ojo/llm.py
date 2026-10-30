@@ -20,6 +20,7 @@ VERSIONES = {
     "v3": {"sistema": True, "senales": True, "rag": False, "ejemplos": False},
     "v4": {"sistema": True, "senales": True, "rag": True, "ejemplos": False},
     "v5": {"sistema": True, "senales": True, "rag": True, "ejemplos": True},
+    "v6": {"sistema": True, "senales": True, "rag": True, "ejemplos": True, "archivo": "sistema_v6.md"},
 }
 
 

@@ -30,6 +30,9 @@ ITERACIONES = {
     "L3": {"desc": "L2 + señales extraídas en el preprocesamiento", "version": "v3"},
     "L4": {"desc": "L3 + RAG con los 3 patrones más parecidos (e5-small, coseno)", "version": "v4"},
     "L5": {"desc": "L4 + 5 ejemplos few-shot del conjunto de desarrollo", "version": "v5"},
+    "L6": {"desc": "L5 con criterio más estricto para 'sospechoso' en el prompt de sistema (v6)", "version": "v6"},
+    "L7": {"desc": "L6 con el razonamiento del modelo apagado", "version": "v6", "razonamiento": "apagado"},
+    "L8": {"desc": "L6 con effort medium en lugar de low", "version": "v6", "effort": "medium"},
 }
 INYECCION = {"t27", "t28"}
 
