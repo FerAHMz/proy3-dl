@@ -1,0 +1,618 @@
+{
+ "desconocido::BANRURAL: Estimado cliente, su tarjeta de débito fue BLOQUEADA por seguridad. Para reactivarla ingrese sus datos en banrural-reactivacion.com antes de las 6:00 pm de hoy.": {
+  "ok": true,
+  "json_valido": true,
+  "veredicto": "estafa",
+  "certeza": "alta",
+  "tipo": "banco_bloqueo",
+  "senales": [
+   "Dice que la tarjeta de débito fue bloqueada, un aviso típico de phishing bancario.",
+   "El enlace banrural-reactivacion.com no es el dominio oficial de Banrural.",
+   "Pide ingresar sus datos en una página web para reactivar la tarjeta.",
+   "Pone un plazo de hoy a las 6:00 pm para presionar y que actúe sin pensar."
+  ],
+  "explicacion": "Este mensaje se hace pasar por Banrural para asustarte con un bloqueo de tu tarjeta. El banco real nunca te pide datos por un enlace de un mensaje, y la dirección no es la oficial, así que es una página falsa para robarte la información.",
+  "que_hacer": [
+   "No abras el enlace ni ingreses ningún dato.",
+   "Llamá al número de Banrural que aparece en tu tarjeta o en su sitio oficial para confirmar si hay algún problema.",
+   "Si ya ingresaste datos, comunicate de inmediato con el banco para bloquear la tarjeta y cambiar tus claves.",
+   "Reenviá el mensaje al banco para que lo reporten y lo den de baja."
+  ],
+  "latencia_s": 2.8527639999520034,
+  "tokens_entrada": 3462,
+  "tokens_salida": 418,
+  "costo_usd": 0.0005552,
+  "stop_reason": "end_turn",
+  "modo_respaldo": false,
+  "alertas": [
+   "El enlace banrural-reactivacion.com parece imitar a una marca o institución pero no es su dominio oficial",
+   "Usa lenguaje de urgencia o amenaza de bloqueo"
+  ],
+  "enlaces": [
+   {
+    "url": "banrural-reactivacion.com",
+    "dominio": "banrural-reactivacion.com",
+    "oficial": false,
+    "acortador": false,
+    "tld_sospechoso": false,
+    "imita_marca": true,
+    "archivo_apk": false,
+    "whatsapp_externo": false
+   }
+  ],
+  "patrones": [
+   {
+    "id": "banco_bloqueo",
+    "nombre": "Banco: cuenta o tarjeta bloqueada (phishing)",
+    "descripcion": "Se hacen pasar por un banco (Banrural, Industrial, BAM, G&T Continental u otro) y dicen que tu cuenta o tarjeta fue bloqueada o tuvo un movimiento extraño. Mandan un enlace a una página falsa para que ingresés usuario, contraseña o datos de la tarjeta.",
+    "senales": [
+     "enlace que no es el dominio oficial del banco",
+     "urgencia por bloqueo o suspensión",
+     "pide usuario, contraseña, token o datos de tarjeta",
+     "dominio que imita al banco"
+    ],
+    "ejemplo": "BANRURAL: Su usuario fue suspendido por actividad inusual. Reactive en las próximas 2 horas ingresando a banrural-seguridad.com/verificar",
+    "que_hacer": [
+     "No abrás el enlace",
+     "Entrá a tu banca en línea escribiendo la dirección oficial o usando la app",
+     "Llamá al número que aparece detrás de tu tarjeta",
+     "Reportalo a tu banco (Banrural, por ejemplo, recibe reportes al 2308-3000 opción 0)"
+    ],
+    "fuentes": [
+     "https://www.banrural.com.gt/site/seguridad/alerta-estafa",
+     "https://www.banrural.com.gt/ciberseguridad"
+    ],
+    "similitud": 0.8948225378990173
+   },
+   {
+    "id": "puntos_por_vencer",
+    "nombre": "Puntos de tarjeta por vencer",
+    "descripcion": "Un mensaje que aparenta ser del banco avisa que tus puntos de tarjeta de crédito están por vencer y manda un enlace para canjearlos. El enlace instala una aplicación de acceso remoto y luego pide validar tu identidad con biometría facial para vaciar la cuenta. Banrural la reportó con varios números remitentes.",
+    "senales": [
+     "puntos o beneficios a punto de vencer",
+     "enlace para canjear fuera de la app oficial",
+     "pide instalar una aplicación o validar tu rostro"
+    ],
+    "ejemplo": "Banrural: Sus puntos de tarjeta de crédito vencen hoy. Canjéelos antes de perderlos en el siguiente enlace.",
+    "que_hacer": [
+     "Canjeá puntos solo desde la app o la banca en línea oficial",
+     "No instalés aplicaciones desde enlaces",
+     "Nunca compartás tu biometría ni tus datos de tarjeta"
+    ],
+    "fuentes": [
+     "https://www.banrural.com.gt/alerta-de-smishing",
+     "https://www.banrural.com.gt/site/seguridad/alerta-estafa"
+    ],
+    "similitud": 0.8571357727050781
+   },
+   {
+    "id": "servicio_corte",
+    "nombre": "Corte de servicio inmediato",
+    "descripcion": "Avisan que te van a cortar la luz, el agua, el internet o el teléfono hoy mismo por un saldo pendiente, y piden pagar a una cuenta o enlace distinto al habitual.",
+    "senales": [
+     "corte inmediato",
+     "monto que no coincide con tu factura",
+     "cuenta o enlace de pago no oficial"
+    ],
+    "ejemplo": "EEGSA: su servicio será suspendido HOY a las 5pm por saldo pendiente de Q385. Evite el corte pagando aquí: eegsa-pagos.online",
+    "que_hacer": [
+     "Revisá tu saldo en la app o página oficial",
+     "Pagá solo por los canales de siempre",
+     "Llamá a servicio al cliente de la empresa"
+    ],
+    "fuentes": [],
+    "similitud": 0.8449487686157227
+   }
+  ],
+  "texto_analizado": "BANRURAL: Estimado cliente, su tarjeta de débito fue BLOQUEADA por seguridad. Para reactivarla ingrese sus datos en banrural-reactivacion.com antes de las 6:00 pm de hoy.",
+  "t_recuperacion_s": 4.338403707835823,
+  "t_total_s": 7.191701707895845
+ },
+ "desconocido::Hola abue, soy Luis, este es mi número nuevo porque me robaron el cel. Necesito que me ayudés con Q900 para pagar una multa, depositá a la cuenta de mi amigo y no le digás a mi papá porfa": {
+  "ok": true,
+  "json_valido": true,
+  "veredicto": "estafa",
+  "certeza": "alta",
+  "tipo": "familiar_emergencia",
+  "senales": [
+   "Llega desde un número desconocido que dice ser un nuevo número de un nieto.",
+   "Pide un depósito urgente de Q900 para pagar una multa.",
+   "Pide depositar en la cuenta de un tercero, no de la persona que dice escribir.",
+   "Pide que no se le cuente a los padres, para evitar verificación."
+  ],
+  "explicacion": "Este mensaje imita a un nieto que perdió su celular y pide dinero con urgencia. Pedir que no se avise a su papá es una forma de evitar que confirmes la historia con la familia. Si no podés verificar con la persona real por su número de siempre, no envíes dinero.",
+  "que_hacer": [
+   "No deposites ni transferas dinero.",
+   "Llamá al número de siempre de tu familiar, o a otro familiar que sí conozcas, para confirmar.",
+   "Si te sentís presionado, no respondas más y avisá a otro familiar.",
+   "Si ya depositaste, comunicate con tu banco de inmediato y guardá el comprobante."
+  ],
+  "latencia_s": 3.1524132089689374,
+  "tokens_entrada": 3441,
+  "tokens_salida": 373,
+  "costo_usd": 0.0005306,
+  "stop_reason": "end_turn",
+  "modo_respaldo": false,
+  "alertas": [
+   "Pide un pago, depósito o transferencia",
+   "Dice escribir desde un número nuevo o prestado"
+  ],
+  "enlaces": [],
+  "patrones": [
+   {
+    "id": "familiar_emergencia",
+    "nombre": "Familiar o amigo en emergencia con número nuevo",
+    "descripcion": "Alguien escribe desde un número desconocido diciendo ser tu hijo, mamá o amigo, que cambió de número o se le arruinó el teléfono, y pide un depósito urgente por una emergencia, una deuda o un problema con la policía.",
+    "senales": [
+     "número nuevo o desconocido que dice ser un familiar",
+     "pedido urgente de dinero",
+     "pide que no llamés o que no le digás a nadie",
+     "cuenta a nombre de un tercero"
+    ],
+    "ejemplo": "Hola ma, soy yo, este es mi número nuevo. Tengo un problema y necesito que me depositás Q1,200 hoy, después te explico, no me llamés que estoy en reunión.",
+    "que_hacer": [
+     "Llamá al número de siempre de tu familiar antes de depositar",
+     "Hacé una pregunta que solo esa persona sabría",
+     "No depositar a cuentas de terceros"
+    ],
+    "fuentes": [
+     "https://emisorasunidas.com/viral/2025/05/13/estan-enganando-a-whatsapp-con-ia/"
+    ],
+    "similitud": 0.8759786486625671
+   },
+   {
+    "id": "encomienda_familiar_extranjero",
+    "nombre": "Encomienda o maletas de un familiar en el extranjero",
+    "descripcion": "Un perfil falso de un familiar o amigo que vive en Estados Unidos escribe ('adivina quién soy') y promete mandar una encomienda con celulares, regalos o dinero. Después un falso courier o una falsa SAT cobra por sobrepeso, impuestos o 'dinero no declarado' y amenaza con cargos legales. El MP la reporta entre las más recurrentes.",
+    "senales": [
+     "'adivina quién de tu familia te habla'",
+     "número extranjero o perfil nuevo",
+     "cobros de courier, aduana o SAT para liberar el paquete",
+     "amenazas de cargos por lavado de dinero",
+     "depósitos a cuentas de particulares"
+    ],
+    "ejemplo": "Hola ¿cómo estás? adivina quien de tu familia en Estados Unidos te está hablando, si aciertas te doy una sorpresa",
+    "que_hacer": [
+     "Llamá a tu familiar a su número de siempre",
+     "Pedí el número de guía y verificalo con la empresa",
+     "Verificá cualquier multa directamente con la SAT",
+     "No depositar a cuentas de particulares"
+    ],
+    "fuentes": [
+     "https://www.soy502.com/articulo/victimas-alertan-estafa-whatsapp-ocurrida-guatemala-153",
+     "https://www.prensalibre.com/guatemala/justicia/alertan-sobre-modalidad-de-estafa-por-supuestas-encomiendas-y-dan-recomendaciones-para-evitar-ser-victima-breaking/",
+     "https://www.prensalibre.com/guatemala/justicia/como-operaba-en-redes-sociales-y-whatsapp-red-de-supuestos-estafadores-desarticulada-por-pnc/"
+    ],
+    "similitud": 0.8560498952865601
+   },
+   {
+    "id": "premio_falso",
+    "nombre": "Premio o sorteo falso",
+    "descripcion": "Avisan que ganaste un premio, rifa o sorteo (de una telefónica, un banco, un supermercado o una marca conocida) que nunca jugaste. Para entregarlo piden pagar impuestos, envío o una recarga, o piden datos personales.",
+    "senales": [
+     "premio que no participaste",
+     "pedido de pago para recibir el premio",
+     "plazo muy corto para reclamar",
+     "número personal o enlace no oficial"
+    ],
+    "ejemplo": "¡Felicidades! Su número fue ganador de Q15,000 en la promoción aniversario. Para reclamar deposite Q350 de gastos de entrega al 4521-8890.",
+    "que_hacer": [
+     "No pagués nada para recibir un premio",
+     "Confirmá llamando al número oficial de la empresa",
+     "Bloqueá y reportá el número"
+    ],
+    "fuentes": [
+     "https://www.prensalibre.com/guatemala/comunitario/10-mensajes-que-utilizan-los-estafadores-en-linea-para-robarle-su-dinero/",
+     "https://www.soy502.com/articulo/estafadores-hacen-pasar-trabajadores-sib-24039"
+    ],
+    "similitud": 0.852849006652832
+   }
+  ],
+  "texto_analizado": "Hola abue, soy Luis, este es mi número nuevo porque me robaron el cel. Necesito que me ayudés con Q900 para pagar una multa, depositá a la cuenta de mi amigo y no le digás a mi papá porfa",
+  "t_recuperacion_s": 0.04069712501950562,
+  "t_total_s": 3.193381458055228
+ },
+ "desconocido::TIGO te felicita! Tu línea ganó Q10,000 en el sorteo de aniversario. Para recibirlo enviá Q250 de activación al 5512-7788 por Tigo Money.": {
+  "ok": true,
+  "json_valido": true,
+  "veredicto": "estafa",
+  "certeza": "alta",
+  "tipo": "premio_falso",
+  "senales": [
+   "Anuncia un premio de Q10,000 en un sorteo que el usuario nunca jugó.",
+   "Pide enviar Q250 de 'activación' para recibir el premio.",
+   "El pago se pide a un número desconocido por Tigo Money.",
+   "Usa el nombre de Tigo para dar confianza a un mensaje no solicitado."
+  ],
+  "explicacion": "Este mensaje dice que ganaste un premio que nunca jugaste y te pide pagar primero. Las empresas reales no cobran por entregar premios, así que es una estafa para quitarte dinero.",
+  "que_hacer": [
+   "No envíes el dinero ni hagas ninguna recarga.",
+   "No respondas al mensaje ni compartas tus datos.",
+   "Si tenés dudas, llamá al número oficial de Tigo que aparece en su página o en tu factura.",
+   "Bloqueá el número y reportalo como spam en WhatsApp."
+  ],
+  "latencia_s": 2.5954058750066906,
+  "tokens_entrada": 3413,
+  "tokens_salida": 337,
+  "costo_usd": 0.0005098,
+  "stop_reason": "end_turn",
+  "modo_respaldo": false,
+  "alertas": [
+   "Habla de un premio o sorteo"
+  ],
+  "enlaces": [],
+  "patrones": [
+   {
+    "id": "premio_falso",
+    "nombre": "Premio o sorteo falso",
+    "descripcion": "Avisan que ganaste un premio, rifa o sorteo (de una telefónica, un banco, un supermercado o una marca conocida) que nunca jugaste. Para entregarlo piden pagar impuestos, envío o una recarga, o piden datos personales.",
+    "senales": [
+     "premio que no participaste",
+     "pedido de pago para recibir el premio",
+     "plazo muy corto para reclamar",
+     "número personal o enlace no oficial"
+    ],
+    "ejemplo": "¡Felicidades! Su número fue ganador de Q15,000 en la promoción aniversario. Para reclamar deposite Q350 de gastos de entrega al 4521-8890.",
+    "que_hacer": [
+     "No pagués nada para recibir un premio",
+     "Confirmá llamando al número oficial de la empresa",
+     "Bloqueá y reportá el número"
+    ],
+    "fuentes": [
+     "https://www.prensalibre.com/guatemala/comunitario/10-mensajes-que-utilizan-los-estafadores-en-linea-para-robarle-su-dinero/",
+     "https://www.soy502.com/articulo/estafadores-hacen-pasar-trabajadores-sib-24039"
+    ],
+    "similitud": 0.8540050983428955
+   },
+   {
+    "id": "tareas_pagadas_grupo",
+    "nombre": "Grupo de tareas pagadas (likes o reseñas) que termina en inversión",
+    "descripcion": "Te agregan sin pedirlo a un grupo de WhatsApp o Telegram que paga pequeñas sumas por seguir cuentas, dar likes o calificar películas y hoteles. Después de ganar confianza te piden depositar para desbloquear tareas, subir de nivel o 'invertir' con rendimientos irreales. Según el MP, el daño promedio pasó de unos Q24 mil en 2023 a unos Q70 mil en 2024.",
+    "senales": [
+     "te agregaron a un grupo sin pedirlo",
+     "pagan por likes, reseñas o capturas de pantalla",
+     "prometen de Q200 a Q1,000 diarios",
+     "piden depósito para desbloquear tareas o retirar ganancias"
+    ],
+    "ejemplo": "¡Queremos que usted siga a estos bloggers, comente y gane alrededor de Q200 a Q600 por día!",
+    "que_hacer": [
+     "Salí del grupo y reportalo como spam",
+     "No depositar para desbloquear tareas ni retirar ganancias",
+     "Denunciá en el Ministerio Público aunque solo te hayan agregado"
+    ],
+    "fuentes": [
+     "https://www.prensalibre.com/guatemala/justicia/estafas-por-whatsapp-alertan-sobre-nueva-modalidad-de-engano-en-guatemala/",
+     "https://www.soy502.com/articulo/alerta-guatemaltecos-estos-mensajes-llegan-whatsapp-101477",
+     "https://www.soy502.com/articulo/dinerofacil-forma-estan-estafando-guatemaltecos-101477"
+    ],
+    "similitud": 0.8495230674743652
+   },
+   {
+    "id": "operadora_chip",
+    "nombre": "Falsa operadora telefónica (chip o línea)",
+    "descripcion": "Se hacen pasar por Tigo o Claro para 'actualizar tu chip', 'migrar tu línea' o regalar saldo, y piden un código o tus datos para tomar control de tu número.",
+    "senales": [
+     "pide códigos o PIN de tu línea",
+     "actualización de chip urgente",
+     "regalo de saldo o megas a cambio de datos"
+    ],
+    "ejemplo": "TIGO: Su chip será desactivado por actualización 5G. Responda con el código que le llegará por SMS para conservar su número.",
+    "que_hacer": [
+     "Las operadoras no piden códigos por mensaje",
+     "Acudí a una agencia oficial si tenés dudas",
+     "No respondás con códigos"
+    ],
+    "fuentes": [
+     "https://www.prensalibre.com/guatemala/comunitario/asi-desactivaba-las-lineas-telefonicas-de-las-victimas-para-realizar-transacciones-bancarias/"
+    ],
+    "similitud": 0.8474060297012329
+   }
+  ],
+  "texto_analizado": "TIGO te felicita! Tu línea ganó Q10,000 en el sorteo de aniversario. Para recibirlo enviá Q250 de activación al 5512-7788 por Tigo Money.",
+  "t_recuperacion_s": 0.04969962500035763,
+  "t_total_s": 2.645414459053427
+ },
+ "desconocido::Guatex: su encomienda #GT88123 está detenida por falta de pago de Q32.00. Pague en bit.ly/guatex-pago para evitar la devolución.": {
+  "ok": true,
+  "json_valido": true,
+  "veredicto": "estafa",
+  "certeza": "alta",
+  "tipo": "paquete_retenido",
+  "senales": [
+   "Dice que una encomienda está detenida y exige pagar Q32.00 para liberarla",
+   "Usa un enlace acortado bit.ly que oculta el destino real",
+   "Pone presión con la amenaza de devolver el paquete si no pagás",
+   "El remitente es un número desconocido y no un courier oficial conocido"
+  ],
+  "explicacion": "Este mensaje imita a un servicio de envíos para que pagues una pequeña cantidad por un paquete que quizás ni existe. El enlace acortado no deja ver a dónde te lleva, y eso es lo típico de las estafas de cobro. Un courier real no te pide pagar por un link acortado mandado por WhatsApp o SMS.",
+  "que_hacer": [
+   "No abras el enlace ni ingreses datos de tarjeta o cuenta",
+   "Si esperás un paquete, entrá directamente a la página oficial del courier o llamá a su número de atención al cliente que aparezca en su sitio",
+   "Borrá el mensaje y bloqueá el número",
+   "Si ya pagaste o diste datos, llamá a tu banco de inmediato para bloquear la tarjeta"
+  ],
+  "latencia_s": 2.800731624942273,
+  "tokens_entrada": 3367,
+  "tokens_salida": 411,
+  "costo_usd": 0.0005422000000000001,
+  "stop_reason": "end_turn",
+  "modo_respaldo": false,
+  "alertas": [
+   "Usa un enlace acortado (bit.ly) que esconde el destino real",
+   "Pide un pago, depósito o transferencia"
+  ],
+  "enlaces": [
+   {
+    "url": "bit.ly/guatex-pago",
+    "dominio": "bit.ly",
+    "oficial": false,
+    "acortador": true,
+    "tld_sospechoso": false,
+    "imita_marca": false,
+    "archivo_apk": false,
+    "whatsapp_externo": false
+   }
+  ],
+  "patrones": [
+   {
+    "id": "paquete_retenido",
+    "nombre": "Paquete retenido en aduana o courier",
+    "descripcion": "Un mensaje dice que tenés un paquete retenido en aduanas, en un courier o en el correo, y que para liberarlo debés pagar un arancel o actualizar tu dirección en un enlace.",
+    "senales": [
+     "paquete que no esperabas",
+     "cobro pequeño para liberar el envío",
+     "enlace acortado o dominio extraño",
+     "pide datos de tarjeta"
+    ],
+    "ejemplo": "Aviso de envío: su paquete está retenido en aduana por falta de pago de Q27.50. Pague en bit.ly/entrega-gt para evitar la devolución.",
+    "que_hacer": [
+     "Rastreá el paquete solo en la página oficial del courier",
+     "No pagués desde enlaces de mensajes",
+     "Si no esperás nada, ignoralo",
+     "Correos de Guatemala no cobra por enlaces; verificá en correos.gob.gt o al 1595"
+    ],
+    "fuentes": [
+     "https://emisorasunidas.com/2024/03/19/estafa-guatemaltecos-mensajes-de-texto/",
+     "https://lahora.gt/nacionales/hloarca/2024/09/04/alertan-de-estafas-por-mensajes-de-texto-que-usurpan-nombres-de-empresas-conocidas/",
+     "https://lahora.gt/nacionales/ralvarado/2026/09/29/correos-de-guatemala-alerta-por-mensajes-de-texto-fraudulentos-a-usuarios-now/"
+    ],
+    "similitud": 0.8776636123657227
+   },
+   {
+    "id": "encomienda_familiar_extranjero",
+    "nombre": "Encomienda o maletas de un familiar en el extranjero",
+    "descripcion": "Un perfil falso de un familiar o amigo que vive en Estados Unidos escribe ('adivina quién soy') y promete mandar una encomienda con celulares, regalos o dinero. Después un falso courier o una falsa SAT cobra por sobrepeso, impuestos o 'dinero no declarado' y amenaza con cargos legales. El MP la reporta entre las más recurrentes.",
+    "senales": [
+     "'adivina quién de tu familia te habla'",
+     "número extranjero o perfil nuevo",
+     "cobros de courier, aduana o SAT para liberar el paquete",
+     "amenazas de cargos por lavado de dinero",
+     "depósitos a cuentas de particulares"
+    ],
+    "ejemplo": "Hola ¿cómo estás? adivina quien de tu familia en Estados Unidos te está hablando, si aciertas te doy una sorpresa",
+    "que_hacer": [
+     "Llamá a tu familiar a su número de siempre",
+     "Pedí el número de guía y verificalo con la empresa",
+     "Verificá cualquier multa directamente con la SAT",
+     "No depositar a cuentas de particulares"
+    ],
+    "fuentes": [
+     "https://www.soy502.com/articulo/victimas-alertan-estafa-whatsapp-ocurrida-guatemala-153",
+     "https://www.prensalibre.com/guatemala/justicia/alertan-sobre-modalidad-de-estafa-por-supuestas-encomiendas-y-dan-recomendaciones-para-evitar-ser-victima-breaking/",
+     "https://www.prensalibre.com/guatemala/justicia/como-operaba-en-redes-sociales-y-whatsapp-red-de-supuestos-estafadores-desarticulada-por-pnc/"
+    ],
+    "similitud": 0.858533501625061
+   },
+   {
+    "id": "remesa_falsa",
+    "nombre": "Remesa retenida",
+    "descripcion": "Avisan que te llegó una remesa o transferencia del extranjero pero que está retenida, y que para liberarla debés pagar una comisión o un impuesto.",
+    "senales": [
+     "remesa que no esperabas",
+     "cobro para liberar el dinero",
+     "contacto por WhatsApp sin agencia identificable"
+    ],
+    "ejemplo": "Le informamos que tiene una remesa de $800 a su nombre retenida. Para liberarla deposite Q275 de impuesto de envío.",
+    "que_hacer": [
+     "Las remesas reales no requieren pagos para cobrarlas",
+     "Confirmá con quien supuestamente te envió el dinero",
+     "Cobrá solo en agencias oficiales"
+    ],
+    "fuentes": [],
+    "similitud": 0.8555271625518799
+   }
+  ],
+  "texto_analizado": "Guatex: su encomienda #GT88123 está detenida por falta de pago de Q32.00. Pague en bit.ly/guatex-pago para evitar la devolución.",
+  "t_recuperacion_s": 0.0420310830231756,
+  "t_total_s": 2.843057000078261
+ },
+ "empresa::BI: Tu codigo de verificacion es 556120. Nunca lo compartas, Bi jamas te lo pedira por llamada o mensaje.": {
+  "ok": true,
+  "json_valido": true,
+  "veredicto": "seguro",
+  "certeza": "alta",
+  "tipo": "ninguno",
+  "senales": [
+   "Es un código de verificación de Banco Industrial (BI).",
+   "El mensaje advierte explícitamente que no se comparta el código.",
+   "No trae enlaces ni pide datos, dinero ni acciones adicionales.",
+   "Las señales automáticas de datos sensibles se explican porque el código aparece en el texto, pero el mensaje es una advertencia de seguridad."
+  ],
+  "explicacion": "Este mensaje parece un código de verificación normal del banco, que solo sirve para que vos confirmes una acción que vos mismo iniciaste. El propio banco avisa que nunca te va a pedir ese código por llamada o mensaje, así que no hay engaño aquí.",
+  "que_hacer": [
+   "No compartas el código con nadie, aunque te llamen o escriban diciendo que son del banco.",
+   "Si no pediste ningún código o alguien te lo pide después, llamá al número oficial del banco que aparece en tu tarjeta.",
+   "Si no reconocés la acción que originó el código, cambiá tu contraseña de banca en línea por el canal oficial."
+  ],
+  "latencia_s": 2.6620151249226183,
+  "tokens_entrada": 3332,
+  "tokens_salida": 386,
+  "costo_usd": 0.0005262,
+  "stop_reason": "end_turn",
+  "modo_respaldo": false,
+  "alertas": [
+   "Menciona códigos, contraseñas, tokens o datos de tarjeta"
+  ],
+  "enlaces": [],
+  "patrones": [
+   {
+    "id": "soporte_tecnico",
+    "nombre": "Falso soporte técnico o virus",
+    "descripcion": "Avisan que tu teléfono o computadora tiene un virus, o que tu cuenta tiene un problema, y te piden instalar una aplicación de acceso remoto o una 'app de seguridad' que en realidad roba información.",
+    "senales": [
+     "alerta de virus que no pediste",
+     "pide instalar una app o dar acceso remoto",
+     "enlace a archivo .apk"
+    ],
+    "ejemplo": "ALERTA: Su celular tiene 3 virus que pueden robar sus datos bancarios. Descargue el antivirus aquí: seguridad-movil.xyz/limpiar.apk",
+    "que_hacer": [
+     "No instalés apps fuera de la tienda oficial",
+     "Nunca des acceso remoto a desconocidos",
+     "Ignorá alertas que llegan por mensaje"
+    ],
+    "fuentes": [],
+    "similitud": 0.8636735081672668
+   },
+   {
+    "id": "codigo_whatsapp",
+    "nombre": "Robo de cuenta con código de verificación",
+    "descripcion": "Alguien te pide que le reenvíes un código de 6 dígitos que te llegó por SMS, diciendo que lo enviaron por error o que es para un concurso. Con ese código se roban tu cuenta de WhatsApp, Facebook o tu banca.",
+    "senales": [
+     "pide reenviar un código SMS",
+     "dice que el código te llegó por error",
+     "suele venir de un contacto conocido ya hackeado",
+     "urgencia"
+    ],
+    "ejemplo": "Hola, perdón, te mandé un código de 6 dígitos por SMS sin querer, me lo podés pasar porfa? Es urgente.",
+    "que_hacer": [
+     "Nunca compartás códigos de verificación",
+     "Activá la verificación en dos pasos de WhatsApp",
+     "Avisale a tu contacto por otra vía que lo hackearon"
+    ],
+    "fuentes": [
+     "https://lahora.gt/lh-economia/jveliz/2026/06/22/el-error-que-permite-a-los-estafadores-quedarse-con-tu-cuenta-de-whatsapp-en-minutos-now/",
+     "https://agn.gt/?p=562196"
+    ],
+    "similitud": 0.8634395599365234
+   },
+   {
+    "id": "premio_falso",
+    "nombre": "Premio o sorteo falso",
+    "descripcion": "Avisan que ganaste un premio, rifa o sorteo (de una telefónica, un banco, un supermercado o una marca conocida) que nunca jugaste. Para entregarlo piden pagar impuestos, envío o una recarga, o piden datos personales.",
+    "senales": [
+     "premio que no participaste",
+     "pedido de pago para recibir el premio",
+     "plazo muy corto para reclamar",
+     "número personal o enlace no oficial"
+    ],
+    "ejemplo": "¡Felicidades! Su número fue ganador de Q15,000 en la promoción aniversario. Para reclamar deposite Q350 de gastos de entrega al 4521-8890.",
+    "que_hacer": [
+     "No pagués nada para recibir un premio",
+     "Confirmá llamando al número oficial de la empresa",
+     "Bloqueá y reportá el número"
+    ],
+    "fuentes": [
+     "https://www.prensalibre.com/guatemala/comunitario/10-mensajes-que-utilizan-los-estafadores-en-linea-para-robarle-su-dinero/",
+     "https://www.soy502.com/articulo/estafadores-hacen-pasar-trabajadores-sib-24039"
+    ],
+    "similitud": 0.8552817702293396
+   }
+  ],
+  "texto_analizado": "BI: Tu codigo de verificacion es 556120. Nunca lo compartas, Bi jamas te lo pedira por llamada o mensaje.",
+  "t_recuperacion_s": 0.03706487501040101,
+  "t_total_s": 2.699376834090799
+ },
+ "contacto::Mijo, cuando salgás del trabajo pasá a la farmacia por mis pastillas de la presión, aquí te doy el pisto en la noche": {
+  "ok": true,
+  "json_valido": true,
+  "veredicto": "seguro",
+  "certeza": "alta",
+  "tipo": "ninguno",
+  "senales": [
+   "Remitente es un contacto guardado en el teléfono del usuario.",
+   "Pide un favor cotidiano: pasar por una farmacia por medicinas.",
+   "No pide dinero por adelantado, datos, códigos ni enlaces.",
+   "No hay urgencia artificial ni amenazas."
+  ],
+  "explicacion": "Parece un mensaje normal de un familiar conocido pidiendo un favor de rutina, sin nada que busque dinero o datos. Los patrones de emergencia con número nuevo no aplican porque el remitente es un contacto guardado.",
+  "que_hacer": [
+   "Respondé normalmente si es tu familiar y confirmá los detalles de la compra.",
+   "Si el número cambia o pide dinero de forma urgente, verificá llamando al número que ya tenías guardado."
+  ],
+  "latencia_s": 2.6440172081347555,
+  "tokens_entrada": 3399,
+  "tokens_salida": 297,
+  "costo_usd": 0.0004884,
+  "stop_reason": "end_turn",
+  "modo_respaldo": false,
+  "alertas": [],
+  "enlaces": [],
+  "patrones": [
+   {
+    "id": "tareas_pagadas_grupo",
+    "nombre": "Grupo de tareas pagadas (likes o reseñas) que termina en inversión",
+    "descripcion": "Te agregan sin pedirlo a un grupo de WhatsApp o Telegram que paga pequeñas sumas por seguir cuentas, dar likes o calificar películas y hoteles. Después de ganar confianza te piden depositar para desbloquear tareas, subir de nivel o 'invertir' con rendimientos irreales. Según el MP, el daño promedio pasó de unos Q24 mil en 2023 a unos Q70 mil en 2024.",
+    "senales": [
+     "te agregaron a un grupo sin pedirlo",
+     "pagan por likes, reseñas o capturas de pantalla",
+     "prometen de Q200 a Q1,000 diarios",
+     "piden depósito para desbloquear tareas o retirar ganancias"
+    ],
+    "ejemplo": "¡Queremos que usted siga a estos bloggers, comente y gane alrededor de Q200 a Q600 por día!",
+    "que_hacer": [
+     "Salí del grupo y reportalo como spam",
+     "No depositar para desbloquear tareas ni retirar ganancias",
+     "Denunciá en el Ministerio Público aunque solo te hayan agregado"
+    ],
+    "fuentes": [
+     "https://www.prensalibre.com/guatemala/justicia/estafas-por-whatsapp-alertan-sobre-nueva-modalidad-de-engano-en-guatemala/",
+     "https://www.soy502.com/articulo/alerta-guatemaltecos-estos-mensajes-llegan-whatsapp-101477",
+     "https://www.soy502.com/articulo/dinerofacil-forma-estan-estafando-guatemaltecos-101477"
+    ],
+    "similitud": 0.809891402721405
+   },
+   {
+    "id": "servicio_corte",
+    "nombre": "Corte de servicio inmediato",
+    "descripcion": "Avisan que te van a cortar la luz, el agua, el internet o el teléfono hoy mismo por un saldo pendiente, y piden pagar a una cuenta o enlace distinto al habitual.",
+    "senales": [
+     "corte inmediato",
+     "monto que no coincide con tu factura",
+     "cuenta o enlace de pago no oficial"
+    ],
+    "ejemplo": "EEGSA: su servicio será suspendido HOY a las 5pm por saldo pendiente de Q385. Evite el corte pagando aquí: eegsa-pagos.online",
+    "que_hacer": [
+     "Revisá tu saldo en la app o página oficial",
+     "Pagá solo por los canales de siempre",
+     "Llamá a servicio al cliente de la empresa"
+    ],
+    "fuentes": [],
+    "similitud": 0.8038278818130493
+   },
+   {
+    "id": "familiar_emergencia",
+    "nombre": "Familiar o amigo en emergencia con número nuevo",
+    "descripcion": "Alguien escribe desde un número desconocido diciendo ser tu hijo, mamá o amigo, que cambió de número o se le arruinó el teléfono, y pide un depósito urgente por una emergencia, una deuda o un problema con la policía.",
+    "senales": [
+     "número nuevo o desconocido que dice ser un familiar",
+     "pedido urgente de dinero",
+     "pide que no llamés o que no le digás a nadie",
+     "cuenta a nombre de un tercero"
+    ],
+    "ejemplo": "Hola ma, soy yo, este es mi número nuevo. Tengo un problema y necesito que me depositás Q1,200 hoy, después te explico, no me llamés que estoy en reunión.",
+    "que_hacer": [
+     "Llamá al número de siempre de tu familiar antes de depositar",
+     "Hacé una pregunta que solo esa persona sabría",
+     "No depositar a cuentas de terceros"
+    ],
+    "fuentes": [
+     "https://emisorasunidas.com/viral/2025/05/13/estan-enganando-a-whatsapp-con-ia/"
+    ],
+    "similitud": 0.8028722405433655
+   }
+  ],
+  "texto_analizado": "Mijo, cuando salgás del trabajo pasá a la farmacia por mis pastillas de la presión, aquí te doy el pisto en la noche",
+  "t_recuperacion_s": 0.04201454087160528,
+  "t_total_s": 2.6863049580715597
+ }
+}
