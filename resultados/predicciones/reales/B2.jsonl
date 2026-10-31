@@ -1,0 +1,12 @@
+{"id": "r01", "es_estafa": 1, "tipo_real": "paquete_retenido", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r02", "es_estafa": 1, "tipo_real": "paquete_retenido", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r03", "es_estafa": 1, "tipo_real": "bono_falso", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r04", "es_estafa": 1, "tipo_real": "multa_transito_falsa", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r05", "es_estafa": 1, "tipo_real": "multa_transito_falsa", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r06", "es_estafa": 1, "tipo_real": "multa_transito_falsa", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r07", "es_estafa": 1, "tipo_real": "empleo_falso", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r08", "es_estafa": 1, "tipo_real": "empleo_falso", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r09", "es_estafa": 1, "tipo_real": "tareas_pagadas_grupo", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r10", "es_estafa": 1, "tipo_real": "encomienda_familiar_extranjero", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r11", "es_estafa": 1, "tipo_real": "premio_falso", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "r12", "es_estafa": 1, "tipo_real": "familiar_emergencia", "veredicto": "estafa", "costo_usd": 0.0}

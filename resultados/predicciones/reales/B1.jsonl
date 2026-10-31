@@ -1,0 +1,12 @@
+{"id": "r01", "es_estafa": 1, "tipo_real": "paquete_retenido", "veredicto": "seguro", "puntaje": 0, "latencia_s": 0.0013291251379996538, "costo_usd": 0.0}
+{"id": "r02", "es_estafa": 1, "tipo_real": "paquete_retenido", "veredicto": "seguro", "puntaje": 0, "latencia_s": 5.966681055724621e-05, "costo_usd": 0.0}
+{"id": "r03", "es_estafa": 1, "tipo_real": "bono_falso", "veredicto": "seguro", "puntaje": 0, "latencia_s": 9.391712956130505e-05, "costo_usd": 0.0}
+{"id": "r04", "es_estafa": 1, "tipo_real": "multa_transito_falsa", "veredicto": "sospechoso", "puntaje": 2, "latencia_s": 0.00010549998842179775, "costo_usd": 0.0}
+{"id": "r05", "es_estafa": 1, "tipo_real": "multa_transito_falsa", "veredicto": "seguro", "puntaje": 0, "latencia_s": 3.195810131728649e-05, "costo_usd": 0.0}
+{"id": "r06", "es_estafa": 1, "tipo_real": "multa_transito_falsa", "veredicto": "seguro", "puntaje": 0, "latencia_s": 2.7624890208244324e-05, "costo_usd": 0.0}
+{"id": "r07", "es_estafa": 1, "tipo_real": "empleo_falso", "veredicto": "sospechoso", "puntaje": 2, "latencia_s": 0.00011070794425904751, "costo_usd": 0.0}
+{"id": "r08", "es_estafa": 1, "tipo_real": "empleo_falso", "veredicto": "seguro", "puntaje": 0, "latencia_s": 0.00011150003410875797, "costo_usd": 0.0}
+{"id": "r09", "es_estafa": 1, "tipo_real": "tareas_pagadas_grupo", "veredicto": "seguro", "puntaje": 0, "latencia_s": 4.629092290997505e-05, "costo_usd": 0.0}
+{"id": "r10", "es_estafa": 1, "tipo_real": "encomienda_familiar_extranjero", "veredicto": "seguro", "puntaje": 1, "latencia_s": 5.550007335841656e-05, "costo_usd": 0.0}
+{"id": "r11", "es_estafa": 1, "tipo_real": "premio_falso", "veredicto": "sospechoso", "puntaje": 2, "latencia_s": 5.312496796250343e-05, "costo_usd": 0.0}
+{"id": "r12", "es_estafa": 1, "tipo_real": "familiar_emergencia", "veredicto": "seguro", "puntaje": 0, "latencia_s": 2.9125018045306206e-05, "costo_usd": 0.0}
