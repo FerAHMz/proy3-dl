@@ -33,6 +33,8 @@ ITERACIONES = {
     "L6": {"desc": "L5 con criterio más estricto para 'sospechoso' en el prompt de sistema (v6)", "version": "v6"},
     "L7": {"desc": "L6 con el razonamiento del modelo apagado", "version": "v6", "razonamiento": "apagado"},
     "L8": {"desc": "L6 con effort medium en lugar de low", "version": "v6", "effort": "medium"},
+    "L9": {"desc": "L8 con la base de conocimiento ampliada a 25 patrones con fuentes reales", "version": "v6", "effort": "medium"},
+    "L10": {"desc": "L9 con prompt v7: avisos no solicitados (multa, empleo, premio) cuentan como señal", "version": "v7", "effort": "medium"},
 }
 INYECCION = {"t27", "t28"}
 
