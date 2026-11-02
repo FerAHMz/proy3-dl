@@ -187,11 +187,13 @@ def mostrar_resultado(r: dict):
                 st.markdown(f"- {a}")
         if "tokens_entrada" in r:
             st.markdown("**Detalles técnicos**")
-            c1, c2, c3, c4 = st.columns(4)
-            c1.metric("Modelo", "Haiku 5.5")
-            c2.metric("Tiempo", f"{r.get('t_total_s', r.get('latencia_s', 0)):.1f} s")
-            c3.metric("Tokens", f"{r['tokens_entrada']} + {r['tokens_salida']}")
-            c4.metric("Costo", f"${r['costo_usd']:.4f}")
+            celdas = [("Haiku 5.5", "Modelo"),
+                      (f"{r.get('t_total_s', r.get('latencia_s', 0)):.1f} s", "Tiempo"),
+                      (f"{r['tokens_entrada']} + {r['tokens_salida']}", "Tokens de entrada y salida"),
+                      (f"${r['costo_usd']:.4f}", "Costo")]
+            st.markdown('<div class="metricas">' + "".join(
+                f'<div class="metrica"><div class="v">{v}</div><div class="e">{e}</div></div>' for v, e in celdas)
+                + "</div>", unsafe_allow_html=True)
 
 
 precargar()
