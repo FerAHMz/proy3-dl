@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 
 from .baselines import clasificar_reglas, entrenar_tfidf, tfidf_validacion_cruzada
-from .config import EVALUACION_PATH, REALES_PATH, RESULTADOS
+from .config import EVALUACION_PATH, REALES_PATH, PROPIOS_PATH, RESULTADOS
 from .llm import VERSIONES
 from .pipeline import analizar
 from .recuperacion import buscar
@@ -35,14 +35,15 @@ ITERACIONES = {
     "L8": {"desc": "L6 con effort medium en lugar de low", "version": "v6", "effort": "medium"},
     "L9": {"desc": "L8 con la base de conocimiento ampliada a 25 patrones con fuentes reales", "version": "v6", "effort": "medium"},
     "L10": {"desc": "L9 con prompt v7: avisos no solicitados (multa, empleo, premio) cuentan como señal", "version": "v7", "effort": "medium"},
+    "L11": {"desc": "L10 con prompt v8, 2 ejemplos y señales nuevas para publicidad de marcas (tgor.me) y estafas desde números celulares", "version": "v8", "effort": "medium"},
 }
 INYECCION = {"t27", "t28"}
 
 
 def cargar(split: str) -> list[dict]:
-    ruta = REALES_PATH if split == "reales" else EVALUACION_PATH
+    ruta = REALES_PATH if split == "reales" else PROPIOS_PATH if split.startswith("propios") else EVALUACION_PATH
     filas = [json.loads(l) for l in ruta.read_text(encoding="utf-8").splitlines() if l.strip()]
-    return [f for f in filas if split == "todo" or f["split"] == split]
+    return [f for f in filas if split in ("todo", "propios") or f["split"] == split]
 
 
 def metricas(casos: list[dict], preds: list[dict]) -> dict:
@@ -88,8 +89,8 @@ def correr_iteracion(it: str, casos: list[dict], hilos: int = 6) -> list[dict]:
         return preds
     if cfg.get("tipo") == "tfidf":
         textos = [f"remitente {c['remitente']} {normalizar(c['texto'])}" for c in casos]
-        if len({c["es_estafa"] for c in casos}) < 2:
-            # Conjunto de reales (solo estafas): se entrena con los 80 mensajes etiquetados.
+        if len({c["es_estafa"] for c in casos}) < 2 or casos[0]["split"].startswith("propios"):
+            # Conjuntos externos (reales y propios): se entrena con los 80 mensajes etiquetados.
             entrenamiento = cargar("todo")
             pred = entrenar_tfidf([f"remitente {c['remitente']} {normalizar(c['texto'])}" for c in entrenamiento],
                                   [c["es_estafa"] for c in entrenamiento]).predict(textos)

@@ -209,10 +209,10 @@ with st.sidebar:
                 "3. Buscamos estafas conocidas parecidas con embeddings\n"
                 "4. Claude Haiku 5.5 decide y explica en lenguaje sencillo")
     m = metricas_finales()
-    if m is not None and "L10" in m.index:
+    if m is not None and "L11" in m.index:
         st.markdown("#### Resultados de la evaluación")
-        st.caption("Evaluado en 60 mensajes etiquetados (30 estafas y 30 legítimos) y 12 mensajes de estafa reales reportados en medios guatemaltecos (12 de 12 detectados).")
-        L, B = m.loc["L10"], m.loc["B2"]
+        st.caption("Evaluado en 60 mensajes etiquetados (30 estafas y 30 legítimos), 12 estafas reales reportadas en medios (12 de 12 detectadas) y 71 SMS reales de un integrante que no se usaron para ajustar el sistema (11 de 11 estafas detectadas y 8% de falsas alarmas).")
+        L, B = m.loc["L11"], m.loc["B2"]
         celdas = [(f"{L['f1']:.2f}", f"F1 (sin LLM: {B['f1']:.2f})"),
                   (f"{100 * L['tasa_falsas_alarmas']:.0f}%", "Falsas alarmas"),
                   (f"{L['latencia_s_prom']:.1f} s", "Tiempo por mensaje"),

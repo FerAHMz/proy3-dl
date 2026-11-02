@@ -6,27 +6,28 @@
   "certeza": "alta",
   "tipo": "banco_bloqueo",
   "senales": [
-   "Dice que la tarjeta de débito fue bloqueada, un aviso típico de phishing bancario.",
-   "El enlace banrural-reactivacion.com no es el dominio oficial de Banrural.",
-   "Pide ingresar sus datos en una página web para reactivar la tarjeta.",
-   "Pone un plazo de hoy a las 6:00 pm para presionar y que actúe sin pensar."
+   "Un número desconocido escribe a nombre de Banrural, que no envía mensajes así desde números comunes.",
+   "El enlace banrural-reactivacion.com no es el dominio oficial del banco.",
+   "Dice que tu tarjeta fue bloqueada y pide ingresar tus datos antes de las 6:00 pm de hoy.",
+   "La urgencia de un plazo corto busca que actúes sin pensar."
   ],
-  "explicacion": "Este mensaje se hace pasar por Banrural para asustarte con un bloqueo de tu tarjeta. El banco real nunca te pide datos por un enlace de un mensaje, y la dirección no es la oficial, así que es una página falsa para robarte la información.",
+  "explicacion": "Es un mensaje falso que se hace pasar por Banrural para asustarte con un bloqueo de tu tarjeta. Si entrás al enlace, te van a robar tus datos y podrían vaciar tu cuenta. El banco nunca te pide datos por mensaje ni por enlaces.",
   "que_hacer": [
-   "No abras el enlace ni ingreses ningún dato.",
-   "Llamá al número de Banrural que aparece en tu tarjeta o en su sitio oficial para confirmar si hay algún problema.",
-   "Si ya ingresaste datos, comunicate de inmediato con el banco para bloquear la tarjeta y cambiar tus claves.",
-   "Reenviá el mensaje al banco para que lo reporten y lo den de baja."
+   "No abras el enlace ni ingreses ningún dato, usuario o contraseña.",
+   "Borrá el mensaje y bloqueá el número.",
+   "Si tenés dudas, llamá al número de atención que aparece en el reverso de tu tarjeta o entrá a la app oficial del banco escribiendo la dirección vos mismo.",
+   "Si ya ingresaste datos, comunicate de inmediato con tu banco para bloquear la tarjeta y cambiar tus claves."
   ],
-  "latencia_s": 2.8527639999520034,
-  "tokens_entrada": 3462,
-  "tokens_salida": 418,
-  "costo_usd": 0.0005552,
+  "latencia_s": 3.112266416894272,
+  "tokens_entrada": 4412,
+  "tokens_salida": 452,
+  "costo_usd": 0.0006672000000000001,
   "stop_reason": "end_turn",
   "modo_respaldo": false,
   "alertas": [
    "El enlace banrural-reactivacion.com parece imitar a una marca o institución pero no es su dominio oficial",
-   "Usa lenguaje de urgencia o amenaza de bloqueo"
+   "Usa lenguaje de urgencia o amenaza de bloqueo",
+   "Un número desconocido escribe a nombre de una empresa o institución, que normalmente envían sus SMS con su nombre como remitente"
   ],
   "enlaces": [
    {
@@ -34,6 +35,7 @@
     "dominio": "banrural-reactivacion.com",
     "oficial": false,
     "acortador": false,
+    "plataforma_marcas": false,
     "tld_sospechoso": false,
     "imita_marca": true,
     "archivo_apk": false,
@@ -105,8 +107,8 @@
    }
   ],
   "texto_analizado": "BANRURAL: Estimado cliente, su tarjeta de débito fue BLOQUEADA por seguridad. Para reactivarla ingrese sus datos en banrural-reactivacion.com antes de las 6:00 pm de hoy.",
-  "t_recuperacion_s": 4.338403707835823,
-  "t_total_s": 7.191701707895845
+  "t_recuperacion_s": 4.404144084081054,
+  "t_total_s": 7.517085209023207
  },
  "desconocido::Hola abue, soy Luis, este es mi número nuevo porque me robaron el cel. Necesito que me ayudés con Q900 para pagar una multa, depositá a la cuenta de mi amigo y no le digás a mi papá porfa": {
   "ok": true,
@@ -115,22 +117,22 @@
   "certeza": "alta",
   "tipo": "familiar_emergencia",
   "senales": [
-   "Llega desde un número desconocido que dice ser un nuevo número de un nieto.",
+   "Escribe desde un número nuevo y dice que le robaron el celular.",
    "Pide un depósito urgente de Q900 para pagar una multa.",
-   "Pide depositar en la cuenta de un tercero, no de la persona que dice escribir.",
-   "Pide que no se le cuente a los padres, para evitar verificación."
+   "Pide depositar a la cuenta de un amigo, no a una cuenta de la familia.",
+   "Pide que no se le diga nada a su papá, para evitar verificaciones."
   ],
-  "explicacion": "Este mensaje imita a un nieto que perdió su celular y pide dinero con urgencia. Pedir que no se avise a su papá es una forma de evitar que confirmes la historia con la familia. Si no podés verificar con la persona real por su número de siempre, no envíes dinero.",
+  "explicacion": "Este mensaje imita a un nieto que perdió su celular y necesita dinero con urgencia. Lo que más preocupa es que pide un depósito a una cuenta de un tercero y que no le cuenten a nadie de la familia, algo típico de las estafas. Antes de depositar, conviene comunicarse con su papá o con el nieto por su número anterior.",
   "que_hacer": [
-   "No deposites ni transferas dinero.",
-   "Llamá al número de siempre de tu familiar, o a otro familiar que sí conozcas, para confirmar.",
-   "Si te sentís presionado, no respondas más y avisá a otro familiar.",
-   "Si ya depositaste, comunicate con tu banco de inmediato y guardá el comprobante."
+   "No deposites dinero ni compartas datos o códigos.",
+   "Llamá al número que tenías guardado de tu nieto o comunicate con su papá para confirmar.",
+   "Si ya depositaste, avisá enseguida a tu banco y guardá el comprobante.",
+   "Bloqueá el número y denunciá el caso si insiste."
   ],
-  "latencia_s": 3.1524132089689374,
-  "tokens_entrada": 3441,
-  "tokens_salida": 373,
-  "costo_usd": 0.0005306,
+  "latencia_s": 2.520453874953091,
+  "tokens_entrada": 4345,
+  "tokens_salida": 393,
+  "costo_usd": 0.000631,
   "stop_reason": "end_turn",
   "modo_respaldo": false,
   "alertas": [
@@ -209,8 +211,8 @@
    }
   ],
   "texto_analizado": "Hola abue, soy Luis, este es mi número nuevo porque me robaron el cel. Necesito que me ayudés con Q900 para pagar una multa, depositá a la cuenta de mi amigo y no le digás a mi papá porfa",
-  "t_recuperacion_s": 0.04069712501950562,
-  "t_total_s": 3.193381458055228
+  "t_recuperacion_s": 0.04087879112921655,
+  "t_total_s": 2.561625916045159
  },
  "desconocido::TIGO te felicita! Tu línea ganó Q10,000 en el sorteo de aniversario. Para recibirlo enviá Q250 de activación al 5512-7788 por Tigo Money.": {
   "ok": true,
@@ -220,25 +222,26 @@
   "tipo": "premio_falso",
   "senales": [
    "Anuncia un premio de Q10,000 en un sorteo que el usuario nunca jugó.",
-   "Pide enviar Q250 de 'activación' para recibir el premio.",
-   "El pago se pide a un número desconocido por Tigo Money.",
-   "Usa el nombre de Tigo para dar confianza a un mensaje no solicitado."
+   "Pide enviar Q250 de activación a un número personal para recibir el premio.",
+   "Usa el nombre de Tigo pero llega desde un número desconocido, no desde el remitente oficial de la empresa.",
+   "El pago se pide por Tigo Money a una cuenta o número particular, no a la empresa."
   ],
-  "explicacion": "Este mensaje dice que ganaste un premio que nunca jugaste y te pide pagar primero. Las empresas reales no cobran por entregar premios, así que es una estafa para quitarte dinero.",
+  "explicacion": "Este mensaje dice que ganaste un premio grande, pero para recibirlo te piden que pagues primero. Las empresas reales no cobran por entregar premios, y menos a un número personal.",
   "que_hacer": [
-   "No envíes el dinero ni hagas ninguna recarga.",
-   "No respondas al mensaje ni compartas tus datos.",
-   "Si tenés dudas, llamá al número oficial de Tigo que aparece en su página o en tu factura.",
-   "Bloqueá el número y reportalo como spam en WhatsApp."
+   "No envíes ningún dinero ni hagas la recarga pedida.",
+   "No respondas ni compartas datos personales o de tu cuenta de Tigo Money.",
+   "Si te interesa saber de promociones, llamá al número oficial de Tigo o revisá sus canales oficiales.",
+   "Bloqueá el número y denunciá el mensaje si tenés forma de hacerlo."
   ],
-  "latencia_s": 2.5954058750066906,
-  "tokens_entrada": 3413,
-  "tokens_salida": 337,
-  "costo_usd": 0.0005098,
+  "latencia_s": 4.391449958086014,
+  "tokens_entrada": 4363,
+  "tokens_salida": 378,
+  "costo_usd": 0.0006253000000000001,
   "stop_reason": "end_turn",
   "modo_respaldo": false,
   "alertas": [
-   "Habla de un premio o sorteo"
+   "Habla de un premio o sorteo",
+   "Un número desconocido escribe a nombre de una empresa o institución, que normalmente envían sus SMS con su nombre como remitente"
   ],
   "enlaces": [],
   "patrones": [
@@ -309,8 +312,8 @@
    }
   ],
   "texto_analizado": "TIGO te felicita! Tu línea ganó Q10,000 en el sorteo de aniversario. Para recibirlo enviá Q250 de activación al 5512-7788 por Tigo Money.",
-  "t_recuperacion_s": 0.04969962500035763,
-  "t_total_s": 2.645414459053427
+  "t_recuperacion_s": 0.05770574999041855,
+  "t_total_s": 4.449459916912019
  },
  "desconocido::Guatex: su encomienda #GT88123 está detenida por falta de pago de Q32.00. Pague en bit.ly/guatex-pago para evitar la devolución.": {
   "ok": true,
@@ -319,27 +322,28 @@
   "certeza": "alta",
   "tipo": "paquete_retenido",
   "senales": [
-   "Dice que una encomienda está detenida y exige pagar Q32.00 para liberarla",
-   "Usa un enlace acortado bit.ly que oculta el destino real",
-   "Pone presión con la amenaza de devolver el paquete si no pagás",
-   "El remitente es un número desconocido y no un courier oficial conocido"
+   "Llega desde un número desconocido pero dice ser de una empresa de envíos, algo que las empresas reales no hacen desde números comunes.",
+   "Dice que tu encomienda está detenida y pide pagar Q32.00 para liberarla.",
+   "El enlace es un acortador bit.ly que oculta a dónde te lleva, no un dominio oficial de Guatex.",
+   "Amenaza con devolver el paquete si no pagás de inmediato, para generar urgencia."
   ],
-  "explicacion": "Este mensaje imita a un servicio de envíos para que pagues una pequeña cantidad por un paquete que quizás ni existe. El enlace acortado no deja ver a dónde te lleva, y eso es lo típico de las estafas de cobro. Un courier real no te pide pagar por un link acortado mandado por WhatsApp o SMS.",
+  "explicacion": "Este mensaje imita un aviso de una empresa de encomiendas para que pagues un supuesto cargo atrasado. Es un engaño: la empresa real no te pediría pagar por un enlace acortado desde un número desconocido. No pagues ni entres al enlace.",
   "que_hacer": [
-   "No abras el enlace ni ingreses datos de tarjeta o cuenta",
-   "Si esperás un paquete, entrá directamente a la página oficial del courier o llamá a su número de atención al cliente que aparezca en su sitio",
-   "Borrá el mensaje y bloqueá el número",
-   "Si ya pagaste o diste datos, llamá a tu banco de inmediato para bloquear la tarjeta"
+   "No abras el enlace bit.ly ni pagues nada.",
+   "Si esperás una encomienda, comunicate con Guatex por su número oficial o su sitio web conocido.",
+   "Borrá el mensaje y, si ya hiciste un pago, llamá a tu banco de inmediato para intentar bloquearlo.",
+   "Compartí el aviso con familiares, sobre todo adultos mayores, para que no caigan."
   ],
-  "latencia_s": 2.800731624942273,
-  "tokens_entrada": 3367,
-  "tokens_salida": 411,
-  "costo_usd": 0.0005422000000000001,
+  "latencia_s": 4.518221667036414,
+  "tokens_entrada": 4317,
+  "tokens_salida": 440,
+  "costo_usd": 0.0006517000000000001,
   "stop_reason": "end_turn",
   "modo_respaldo": false,
   "alertas": [
    "Usa un enlace acortado (bit.ly) que esconde el destino real",
-   "Pide un pago, depósito o transferencia"
+   "Pide un pago, depósito o transferencia",
+   "Un número desconocido escribe a nombre de una empresa o institución, que normalmente envían sus SMS con su nombre como remitente"
   ],
   "enlaces": [
    {
@@ -347,6 +351,7 @@
     "dominio": "bit.ly",
     "oficial": false,
     "acortador": true,
+    "plataforma_marcas": false,
     "tld_sospechoso": false,
     "imita_marca": false,
     "archivo_apk": false,
@@ -423,8 +428,8 @@
    }
   ],
   "texto_analizado": "Guatex: su encomienda #GT88123 está detenida por falta de pago de Q32.00. Pague en bit.ly/guatex-pago para evitar la devolución.",
-  "t_recuperacion_s": 0.0420310830231756,
-  "t_total_s": 2.843057000078261
+  "t_recuperacion_s": 0.05555245908908546,
+  "t_total_s": 4.574102125130594
  },
  "empresa::BI: Tu codigo de verificacion es 556120. Nunca lo compartas, Bi jamas te lo pedira por llamada o mensaje.": {
   "ok": true,
@@ -433,21 +438,21 @@
   "certeza": "alta",
   "tipo": "ninguno",
   "senales": [
-   "Es un código de verificación de Banco Industrial (BI).",
-   "El mensaje advierte explícitamente que no se comparta el código.",
-   "No trae enlaces ni pide datos, dinero ni acciones adicionales.",
-   "Las señales automáticas de datos sensibles se explican porque el código aparece en el texto, pero el mensaje es una advertencia de seguridad."
+   "El mensaje llega con el nombre del banco como remitente, no desde un número común.",
+   "Contiene un código de verificación de 6 dígitos.",
+   "El propio mensaje advierte que no se comparta el código y que el banco nunca lo pide por llamada o mensaje.",
+   "No incluye enlaces, pedidos de dinero ni datos personales."
   ],
-  "explicacion": "Este mensaje parece un código de verificación normal del banco, que solo sirve para que vos confirmes una acción que vos mismo iniciaste. El propio banco avisa que nunca te va a pedir ese código por llamada o mensaje, así que no hay engaño aquí.",
+  "explicacion": "Es un código de verificación normal que el banco envía cuando vos mismo iniciás una operación. Lo único que hay que hacer es no compartirlo con nadie, y el mensaje ya lo dice.",
   "que_hacer": [
-   "No compartas el código con nadie, aunque te llamen o escriban diciendo que son del banco.",
-   "Si no pediste ningún código o alguien te lo pide después, llamá al número oficial del banco que aparece en tu tarjeta.",
-   "Si no reconocés la acción que originó el código, cambiá tu contraseña de banca en línea por el canal oficial."
+   "No compartas este código con nadie, ni con personas que digan ser del banco.",
+   "Si no estabas haciendo ninguna operación o inicio de sesión, llamá al número oficial del banco que aparece en tu tarjeta o en su sitio.",
+   "Si alguien te llama o escribe pidiéndote este código, es una estafa: cortá y no lo des."
   ],
-  "latencia_s": 2.6620151249226183,
-  "tokens_entrada": 3332,
-  "tokens_salida": 386,
-  "costo_usd": 0.0005262,
+  "latencia_s": 2.770473583135754,
+  "tokens_entrada": 4236,
+  "tokens_salida": 353,
+  "costo_usd": 0.0006001,
   "stop_reason": "end_turn",
   "modo_respaldo": false,
   "alertas": [
@@ -519,8 +524,8 @@
    }
   ],
   "texto_analizado": "BI: Tu codigo de verificacion es 556120. Nunca lo compartas, Bi jamas te lo pedira por llamada o mensaje.",
-  "t_recuperacion_s": 0.03706487501040101,
-  "t_total_s": 2.699376834090799
+  "t_recuperacion_s": 0.05897937505505979,
+  "t_total_s": 2.829751875018701
  },
  "contacto::Mijo, cuando salgás del trabajo pasá a la farmacia por mis pastillas de la presión, aquí te doy el pisto en la noche": {
   "ok": true,
@@ -529,20 +534,20 @@
   "certeza": "alta",
   "tipo": "ninguno",
   "senales": [
-   "Remitente es un contacto guardado en el teléfono del usuario.",
-   "Pide un favor cotidiano: pasar por una farmacia por medicinas.",
-   "No pide dinero por adelantado, datos, códigos ni enlaces.",
-   "No hay urgencia artificial ni amenazas."
+   "Remitente es un contacto guardado en tu teléfono",
+   "Pide un favor cotidiano: pasar a la farmacia por medicina",
+   "No pide dinero por adelantado ni datos, códigos o enlaces",
+   "El pago se haría en persona en la noche, sin urgencia ni amenazas"
   ],
-  "explicacion": "Parece un mensaje normal de un familiar conocido pidiendo un favor de rutina, sin nada que busque dinero o datos. Los patrones de emergencia con número nuevo no aplican porque el remitente es un contacto guardado.",
+  "explicacion": "Es un mensaje normal de un familiar conocido pidiendo un favor sencillo. No hay enlaces, códigos ni pedidos de depósito urgente, así que no parece una estafa.",
   "que_hacer": [
-   "Respondé normalmente si es tu familiar y confirmá los detalles de la compra.",
-   "Si el número cambia o pide dinero de forma urgente, verificá llamando al número que ya tenías guardado."
+   "Si querés, confirmá con una llamada que la persona es quien dice ser antes de comprar la medicina",
+   "Respondé normalmente y acordá cómo y cuándo te pagará"
   ],
-  "latencia_s": 2.6440172081347555,
-  "tokens_entrada": 3399,
-  "tokens_salida": 297,
-  "costo_usd": 0.0004884,
+  "latencia_s": 2.474084958899766,
+  "tokens_entrada": 4303,
+  "tokens_salida": 278,
+  "costo_usd": 0.0005693,
   "stop_reason": "end_turn",
   "modo_respaldo": false,
   "alertas": [],
@@ -612,7 +617,7 @@
    }
   ],
   "texto_analizado": "Mijo, cuando salgás del trabajo pasá a la farmacia por mis pastillas de la presión, aquí te doy el pisto en la noche",
-  "t_recuperacion_s": 0.04201454087160528,
-  "t_total_s": 2.6863049580715597
+  "t_recuperacion_s": 0.04562866594642401,
+  "t_total_s": 2.520007124869153
  }
 }

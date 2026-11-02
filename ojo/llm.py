@@ -22,6 +22,8 @@ VERSIONES = {
     "v5": {"sistema": True, "senales": True, "rag": True, "ejemplos": True},
     "v6": {"sistema": True, "senales": True, "rag": True, "ejemplos": True, "archivo": "sistema_v6.md"},
     "v7": {"sistema": True, "senales": True, "rag": True, "ejemplos": True, "archivo": "sistema_v7.md"},
+    "v8": {"sistema": True, "senales": True, "rag": True, "ejemplos": True, "archivo": "sistema_v8.md",
+           "archivo_ejemplos": "ejemplos_v8.md"},
 }
 
 
@@ -61,7 +63,7 @@ def construir_prompt(version: str, texto: str, remitente: str, senales: dict | N
 
     sistema = _leer(cfg.get("archivo", "sistema_v2.md"))
     if cfg["ejemplos"]:
-        sistema += "\n\n" + _leer("ejemplos_v5.md")
+        sistema += "\n\n" + _leer(cfg.get("archivo_ejemplos", "ejemplos_v5.md"))
 
     partes = [f"Remitente: {REMITENTES.get(remitente, 'No sé')}"]
     if cfg["senales"] and senales is not None:

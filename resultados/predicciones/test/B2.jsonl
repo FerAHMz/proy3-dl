@@ -5,8 +5,8 @@
 {"id": "t05", "es_estafa": 1, "tipo_real": "premio_falso", "veredicto": "seguro", "costo_usd": 0.0}
 {"id": "t06", "es_estafa": 1, "tipo_real": "premio_falso", "veredicto": "estafa", "costo_usd": 0.0}
 {"id": "t07", "es_estafa": 1, "tipo_real": "paquete_retenido", "veredicto": "estafa", "costo_usd": 0.0}
-{"id": "t08", "es_estafa": 1, "tipo_real": "empleo_falso", "veredicto": "estafa", "costo_usd": 0.0}
-{"id": "t09", "es_estafa": 1, "tipo_real": "empleo_falso", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "t08", "es_estafa": 1, "tipo_real": "tareas_pagadas_grupo", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "t09", "es_estafa": 1, "tipo_real": "tareas_pagadas_grupo", "veredicto": "estafa", "costo_usd": 0.0}
 {"id": "t10", "es_estafa": 1, "tipo_real": "inversion_cripto", "veredicto": "estafa", "costo_usd": 0.0}
 {"id": "t11", "es_estafa": 1, "tipo_real": "prestamo_anticipo", "veredicto": "estafa", "costo_usd": 0.0}
 {"id": "t12", "es_estafa": 1, "tipo_real": "codigo_whatsapp", "veredicto": "seguro", "costo_usd": 0.0}
@@ -15,7 +15,7 @@
 {"id": "t15", "es_estafa": 1, "tipo_real": "secuestro_virtual", "veredicto": "estafa", "costo_usd": 0.0}
 {"id": "t16", "es_estafa": 1, "tipo_real": "extorsion", "veredicto": "estafa", "costo_usd": 0.0}
 {"id": "t17", "es_estafa": 1, "tipo_real": "suplantacion_institucion", "veredicto": "estafa", "costo_usd": 0.0}
-{"id": "t18", "es_estafa": 1, "tipo_real": "suplantacion_institucion", "veredicto": "estafa", "costo_usd": 0.0}
+{"id": "t18", "es_estafa": 1, "tipo_real": "multa_transito_falsa", "veredicto": "estafa", "costo_usd": 0.0}
 {"id": "t19", "es_estafa": 1, "tipo_real": "servicio_corte", "veredicto": "estafa", "costo_usd": 0.0}
 {"id": "t20", "es_estafa": 1, "tipo_real": "romance", "veredicto": "seguro", "costo_usd": 0.0}
 {"id": "t21", "es_estafa": 1, "tipo_real": "soporte_tecnico", "veredicto": "estafa", "costo_usd": 0.0}

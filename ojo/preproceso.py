@@ -9,12 +9,21 @@ DOMINIOS_OFICIALES = {
     "tigo.com.gt", "claro.com.gt", "sat.gob.gt", "portal.sat.gob.gt", "igssgt.org", "renap.gob.gt",
     "pnc.gob.gt", "mides.gob.gt", "eegsa.com", "energuate.com", "cargoexpreso.com", "guatex.com",
     "muniguate.com", "netflix.com", "amazon.com", "uvg.edu.gt",
+    # dominios cortos que usan los propios bancos y operadoras en sus SMS
+    "bi.gt", "bac.gt", "tgo.gt", "bancoindustrial.com", "nexabanco.com",
 }
 MARCAS = ["banrural", "bi-", "bienlinea", "bam", "gyt", "continental", "tigo", "claro", "sat", "renap",
           "igss", "pnc", "mides", "eegsa", "energuate", "cargoexpreso", "guatex", "netflix", "amazon",
           "aduana", "bono", "gob"]
-ACORTADORES = {"bit.ly", "tinyurl.com", "cutt.ly", "is.gd", "t.co", "ow.ly", "rebrand.ly", "shorturl.at", "t.ly"}
-TLD_SOSPECHOSOS = {"xyz", "top", "click", "online", "site", "info", "live", "shop", "icu", "buzz"}
+ACORTADORES = {"bit.ly", "tinyurl.com", "cutt.ly", "is.gd", "t.co", "ow.ly", "rebrand.ly", "shorturl.at", "t.ly",
+               "lnk.ink", "urlr.me"}
+# Plataformas de SMS masivos que usan las marcas registradas en Guatemala para su publicidad.
+PLATAFORMAS_MARCAS = {"tgor.me"}
+TLD_SOSPECHOSOS = {"xyz", "top", "click", "online", "site", "info", "live", "shop", "icu", "buzz", "club", "sbs",
+                   "cam", "help"}
+# Marcas e instituciones que las estafas por SMS imitan desde números celulares comunes.
+NOMBRES_EMPRESAS = (r"banrural|banco industrial|\bbi\b|\bbam\b|\bbac\b|promerica|\bvisa\b|tigo|claro|emetra|\bpmt\b|"
+                    r"\bpnc\b|guatex|correos|cargo expreso|avianca|\bsat\b|igss|amazon|netflix")
 
 RE_URL = re.compile(r"(?:https?://)?(?:[a-z0-9-]+\.)+[a-z]{2,}(?:/[^\s,]*)?", re.IGNORECASE)
 RE_MONTO = re.compile(r"(?:Q|\$|US\$)\s?\d[\d,]*(?:\.\d+)?|\d[\d,]*\s?quetzales", re.IGNORECASE)
@@ -68,12 +77,13 @@ def analizar_enlaces(texto: str) -> list[dict]:
         if dominio.replace(".", "").isdigit() or "." not in dominio:
             continue
         base = _dominio_base(dominio)
-        oficial = dominio in DOMINIOS_OFICIALES or base in DOMINIOS_OFICIALES
+        oficial = dominio in DOMINIOS_OFICIALES or base in DOMINIOS_OFICIALES or dominio.endswith(".gob.gt")
         tld = dominio.rsplit(".", 1)[-1]
         imita = (not oficial) and any(marca in dominio for marca in MARCAS)
         enlaces.append({
             "url": url, "dominio": dominio, "oficial": oficial,
             "acortador": dominio in ACORTADORES,
+            "plataforma_marcas": dominio in PLATAFORMAS_MARCAS,
             "tld_sospechoso": tld in TLD_SOSPECHOSOS,
             "imita_marca": imita,
             "archivo_apk": url.lower().endswith(".apk"),
@@ -94,6 +104,7 @@ def extraer_senales(texto: str, remitente: str = "nose") -> dict:
         "numero_internacional": bool(RE_INTERNACIONAL.search(t)) or remitente == "internacional",
         "cuenta_bancaria": bool(RE_CUENTA.search(t)),
         "remitente": remitente,
+        "desconocido_como_empresa": remitente == "desconocido" and bool(re.search(NOMBRES_EMPRESAS, t, re.IGNORECASE)),
         **categorias,
     }
     senales["alertas"] = resumir_alertas(senales)
@@ -108,6 +119,9 @@ def resumir_alertas(s: dict) -> list[str]:
             alertas.append(f"El enlace {e['dominio']} parece imitar a una marca o institución pero no es su dominio oficial")
         if e["acortador"]:
             alertas.append(f"Usa un enlace acortado ({e['dominio']}) que esconde el destino real")
+        if e["plataforma_marcas"]:
+            alertas.append(f"El enlace {e['dominio']} es de la plataforma de SMS masivos que usan muchas marcas en "
+                           "Guatemala para su publicidad, por sí solo no indica estafa")
         if e["tld_sospechoso"] and not e["imita_marca"]:
             alertas.append(f"El dominio {e['dominio']} usa una terminación poco común (.{e['dominio'].rsplit('.', 1)[-1]})")
         if e["archivo_apk"]:
@@ -129,6 +143,9 @@ def resumir_alertas(s: dict) -> list[str]:
     alertas += [texto for clave, texto in nombres.items() if s.get(clave)]
     if s["cuenta_bancaria"]:
         alertas.append("Incluye un número de cuenta bancaria")
+    if s["desconocido_como_empresa"]:
+        alertas.append("Un número desconocido escribe a nombre de una empresa o institución, que normalmente "
+                       "envían sus SMS con su nombre como remitente")
     if s["numero_internacional"]:
         alertas.append("Viene de un número internacional o pide escribir a uno")
     return alertas

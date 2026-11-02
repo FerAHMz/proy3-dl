@@ -8,8 +8,8 @@ from .llm import VERSIONES, clasificar
 from .preproceso import extraer_senales, normalizar, ocultar_datos_personales
 from .recuperacion import buscar
 
-VERSION_FINAL = "v7"
-EFFORT_FINAL = "medium"   # L10: mejor configuración en prueba y en mensajes reales
+VERSION_FINAL = "v8"
+EFFORT_FINAL = "medium"   # L11: mejor configuración en prueba y en SMS reales
 
 
 def analizar(texto: str, remitente: str = "nose", version: str = VERSION_FINAL, effort: str = EFFORT_FINAL,

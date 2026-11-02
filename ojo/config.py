@@ -9,6 +9,7 @@ RESULTADOS = RAIZ / "resultados"
 PATRONES_PATH = DATA / "patrones.json"
 EVALUACION_PATH = DATA / "evaluacion.jsonl"
 REALES_PATH = DATA / "reales.jsonl"
+PROPIOS_PATH = DATA / "propios.jsonl"
 INDICE_PATH = DATA / "indice_patrones.npz"
 CACHE_EJEMPLOS_PATH = DATA / "cache_ejemplos.json"
 
