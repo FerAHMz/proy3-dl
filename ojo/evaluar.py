@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 
 from .baselines import clasificar_reglas, entrenar_tfidf, tfidf_validacion_cruzada
-from .config import EVALUACION_PATH, REALES_PATH, PROPIOS_PATH, RESULTADOS
+from .config import EVALUACION_PATH, EXTERNO_PATH, REALES_PATH, PROPIOS_PATH, RESULTADOS
 from .llm import VERSIONES
 from .pipeline import analizar
 from .recuperacion import buscar
@@ -41,7 +41,8 @@ INYECCION = {"t27", "t28"}
 
 
 def cargar(split: str) -> list[dict]:
-    ruta = REALES_PATH if split == "reales" else PROPIOS_PATH if split.startswith("propios") else EVALUACION_PATH
+    ruta = (REALES_PATH if split == "reales" else EXTERNO_PATH if split == "externo"
+            else PROPIOS_PATH if split.startswith("propios") else EVALUACION_PATH)
     filas = [json.loads(l) for l in ruta.read_text(encoding="utf-8").splitlines() if l.strip()]
     return [f for f in filas if split in ("todo", "propios") or f["split"] == split]
 
@@ -89,7 +90,7 @@ def correr_iteracion(it: str, casos: list[dict], hilos: int = 6) -> list[dict]:
         return preds
     if cfg.get("tipo") == "tfidf":
         textos = [f"remitente {c['remitente']} {normalizar(c['texto'])}" for c in casos]
-        if len({c["es_estafa"] for c in casos}) < 2 or casos[0]["split"].startswith("propios"):
+        if len({c["es_estafa"] for c in casos}) < 2 or casos[0]["split"] not in ("dev", "test"):
             # Conjuntos externos (reales y propios): se entrena con los 80 mensajes etiquetados.
             entrenamiento = cargar("todo")
             pred = entrenar_tfidf([f"remitente {c['remitente']} {normalizar(c['texto'])}" for c in entrenamiento],

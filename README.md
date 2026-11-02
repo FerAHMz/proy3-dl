@@ -69,6 +69,17 @@ L6, L8 y L10 se corrieron 3 veces para medir la variación (`resultados/varianza
 
 L10 detectaba todas las estafas, pero marcaba como estafa o sospechoso más de la mitad de la publicidad legítima. Casi todas las marcas en Guatemala envían sus promociones con el acortador `tgor.me` de su plataforma de SMS, y el modelo lo trataba como señal de estafa. En cambio, las estafas reales llegaban desde números celulares comunes con dominios como `lnk.ink`, `.club` o `.sbs`. L11 agrega esas señales al preprocesamiento, un criterio para publicidad de marcas en el prompt v8 y 2 ejemplos tomados de la mitad de ajuste, y sigue detectando todas las estafas sin falsas alarmas en el conjunto de desarrollo y los 12 mensajes reales de medios. Las listas de dominios del preprocesamiento las armamos revisando todos los mensajes, así que la mitad de prueba es independiente para el prompt y los ejemplos pero no del todo para esas listas. En este conjunto el remitente separa casi perfectamente las clases (todas las estafas vienen de números desconocidos), por eso TF-IDF obtiene F1 de 0.957 y no es una comparación justa.
 
+**Validación externa.** Para comprobar que L11 no quedó ajustado solo al teléfono de un integrante, el otro integrante armó `data/externos_hernandez.jsonl` con sus propios SMS (83 mensajes anonimizados, 2 estafas y 81 legítimos), etiquetados a mano antes de ver ninguna predicción. Se evaluó una sola vez, sin cambiar nada del sistema.
+
+| Versión | F1 | Recall | Falsas alarmas |
+|---|---|---|---|
+| B1 reglas | 0.500 | 1.00 | 4.9% |
+| B2 TF-IDF | 0.190 | 1.00 | 21.0% |
+| L10 (prompt v7) | 0.103 | 1.00 | 43.2% |
+| **L11 (final)** | **0.333** | **1.00** | **9.9%** |
+
+La mejora se mantiene con otra operadora (Claro) y con plataformas de SMS que no vimos al ajustar (`7r.is`, `g.merkca.com`), así que no depende de `tgor.me`. Con solo 2 estafas el F1 y el recall no son confiables. Los errores que quedan son otro tipo de mensaje: códigos de verificación y avisos de seguridad legítimos (PayPal, Steam, Microsoft, Starbucks, la activación de Apple Pay de BAC) que el modelo confunde con pedidos de códigos.
+
 **Recuperación** (42 estafas de prueba y reales, `resultados/recuperacion.csv`): e5-small obtuvo recall@1 de 0.762, recall@3 de 0.857 y MRR de 0.825, contra 0.524, 0.810 y 0.678 de MiniLM multilingüe.
 
 ## Instalación y ejecución
@@ -91,6 +102,7 @@ python -m ojo.evaluar --iter B1 B2 L1 L2 L3 L4 L5 L6 L7 L8 L9 L10 L11 --split te
 python -m ojo.evaluar --iter B1 B2 L1 L9 L10 L11 --split reales
 python -m ojo.evaluar --iter L11 --split propios_ajuste
 python -m ojo.evaluar --iter B1 B2 L11 --split propios_prueba
+python -m ojo.evaluar --iter B1 B2 L10 L11 --split externo
 python -m ojo.ejemplos                                               # regenera la caché de ejemplos
 ```
 
@@ -115,6 +127,7 @@ data/
   evaluacion.jsonl     80 mensajes etiquetados (20 de desarrollo y 60 de prueba)
   reales.jsonl         12 mensajes de estafa reales con su fuente
   propios.jsonl        144 SMS reales de un integrante, anonimizados (mitades de ajuste y prueba)
+  externos_hernandez.jsonl  83 SMS reales del otro integrante, solo para validación externa
 resultados/            métricas, varianza y predicciones
 docs/fuentes.md        estadísticas, modalidades y canales oficiales con sus fuentes
 ```
